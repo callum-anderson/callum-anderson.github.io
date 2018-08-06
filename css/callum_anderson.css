@@ -10,6 +10,7 @@ body {
 p, ul {
   margin: 1em 0;
     line-height: 150%;
+    font-size: 1.2em;
 }
 header {
   width: 100%;
@@ -36,8 +37,10 @@ h2 {
 quote {
   font-weight: bold;
   font-family: Georgia, "Arial Black", serif;
+  font-size: 1.5em;
   color: #444;
-  display: inline-block;
+  display: block;
+  clear: both;
   margin: 0 auto 0.5em;
   position: relative;
   left: 10%;
@@ -45,11 +48,11 @@ quote {
 }
 quote:before {
     content: '\201C';
-    left: -10%;
+    left: -5%;
  }
  quote:after {
      content: '\201D';
-     left: 10%;
+     left: 5%;
   }
 quote:after, quote:before {
     position: relative;
