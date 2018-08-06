@@ -1,68 +1,172 @@
+/* For all/mobile phones: */
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+p {
+  margin: 1em 0;
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 #header {
   background-color: black;
   color: white;
 }
 #header h1 {
-  padding: 5px 10px;
-  margin: 0;
+  padding: 5px 30px;
 }
 h2 {
-  margin: 20px auto;
-}
-#nav li, #nav a {
-  display: inline-block;
-}
-#nav a {
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-#nav {
-  text-align: center;
-  background-color: lightgray;
-  border-bottom: 1px solid black;
-}
-#nav a:hover {
-  background-color: darkgray;
+  margin: 10px;
 }
 #section {
-  width: 65%;
-  margin: 30px auto 1.5em;
+  width: 90%;
+  margin: 120px auto 80px;
 }
-.padding, p {
-  padding: 10px;
+quote {
+  font-weight: bold;
+  color: #444;
+  display: inline-block;
+  margin: 0 auto 10px;
+  position: relative;
+  left: 30px;
+}
+quote:before {
+    content: '\201C';
+    left: -10px;
+ }
+ quote:after {
+     content: '\201D';
+     left: 10px;
+  }
+quote:after, quote:before {
+    position: relative;
+    top: 20px;
+    color: rgba(150,150,150,0.5);
+    font-family: Sanchez, serif;
+    font-size: 3em;
+    z-index: -1;
+ }
+
+.padding {
+  margin: 10px;
 }
 .right {
   float: right;
-  margin: 20px 40px 10px 20px;
+  margin: 10px 10px 10px 10px;
 }
 .images {
   border: 2px solid darkgray;
   border-radius: 10px;
 }
-.facts {
-  width: 90%;
-  margin: 30px auto;
-  border-top: 1px dotted darkgray;
-  min-height: 260px;
+.navbar {
+  overflow: hidden;
+  background-color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 30px;
+  text-align: center;
 }
-.facts li {
-  margin: 20px 0;
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  width: 100px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+button {
+width: 120px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  width: 100px;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  width: 100px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #666;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #aaa;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.blog > a {
+  position: relative;
+  top: -100px;
+  left: 0;
 }
 #footer {
   width: 100%;
   border-top: 1px solid black;
   text-align: center;
   padding-top: 5px;
-  font-size: 0.7em;
+  font-size: 0.8em;
   position: fixed;
   bottom: 0;
   background-color: rgba(255,255,255,0.8);
+}
+/* For tablets/laptops/desktops: */
+@media only screen and (min-width: 768px) {
+
+  h2 {
+    margin: 20px auto;
+  }
+  h4 {
+    margin: 15px auto;
+  }
+  #section {
+    width: 70%;
+  }
+.links-list li {
+  margin: 1em;
+}
+  .right {
+    float: right;
+    margin: 20px 40px 10px 20px;
+  }
+
 }
