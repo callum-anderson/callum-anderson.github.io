@@ -37,7 +37,8 @@ h2 {
 quote {
   font-weight: bold;
   font-family: Georgia, "Arial Black", serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-size: 2vw;
   color: #444;
   display: block;
   clear: both;
