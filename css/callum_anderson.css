@@ -4,11 +4,12 @@
   padding: 0;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, Helvetica, sans-serif;
   font-size: 16px;
 }
-p {
+p, ul {
   margin: 1em 0;
+    line-height: 150%;
 }
 header {
   width: 100%;
@@ -30,7 +31,7 @@ h2 {
 }
 #section {
   width: 90%;
-  margin: 120px auto 80px;
+  margin: 150px auto 80px;
 }
 quote {
   font-weight: bold;
@@ -40,6 +41,7 @@ quote {
   margin: 0 auto 0.5em;
   position: relative;
   left: 10%;
+  z-index: -1;
 }
 quote:before {
     content: '\201C';
@@ -55,7 +57,7 @@ quote:after, quote:before {
     color: rgba(200,200,200,0.5);
     font-family: Sanchez, serif;
     font-size: 3em;
-    z-index: -1;
+    z-index: -2;
  }
 
 .padding {
@@ -143,7 +145,7 @@ quote:after, quote:before {
   width: 100%;
   border-top: 1px solid black;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 0.2em;
   font-size: 0.8em;
   position: fixed;
   bottom: 0;
