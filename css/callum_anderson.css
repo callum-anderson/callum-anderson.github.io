@@ -165,7 +165,7 @@ height: 6vh;
 #footer > p {
   width: 80%;
   margin: 3px auto;
-  font-size: 1rem;
+  font-size: 1em;
 }
 /* For tablets/laptops/desktops: */
 @media only screen and (min-width: 768px) {
