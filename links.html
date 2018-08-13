@@ -1,40 +1,56 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Callum Anderson - Links</title>
-    <link rel="stylesheet" type="text/css" href="./css/callum_anderson.css"
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/callum_anderson.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div id="fixed-header">
     <header>
-    <div id="header">
-      <h1>Callum Anderson</h1>
-    </div>
-    <div class="navbar">
-      <a href="./index.html">About</a>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Blog
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="./blog.html#week1">Weeks 1-2</a>
-          <!-- <a href="./blog.html#week3">Weeks 3-4</a>
-          <a href="./blog.html#week5">Weeks 5-6</a>
-          <a href="./blog.html#week7">Weeks 7-8</a>
-          <a href="./blog.html#week9">Weeks 9-10</a>
-          <a href="./blog.html#week11">Weeks 11-12</a>
-          <a href="./blog.html#week13">Weeks 13-14</a>
-          <a href="./blog.html#week15">Weeks 15-16</a> -->
+      <div class="row">
+        <div class="col-xs-12" id="header">
+          <h1>Callum Anderson</h1>
         </div>
       </div>
-      <a href="#">Links</a>
-    </div>
-  </header>
-    <div id="section">
-      <h2>Some useful links</h2>
-
-
-      <h4>Thinking about coding? Want to dip your feet in the water?</h4>
-          <div>
-      <ul class="links-list">
+    </header>
+    <nav>
+      <div class="row">
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-3">
+          <a href="./index.html"><button class="dropbtn">About</button></a>
+        </div>
+        <div class="col-xs-4 dropdown">
+<button onclick="blogDropDown()" class="dropbtn">Blog</button>
+<div id="myDropdown" class="dropdown-content">
+  <a href="./blog.html#week1">Week 1</a>
+  <a href="./blog.html#week2">Week 2</a>
+  <a href="./blog.html#week3"><i>Week 3 - coming soon!</i></a>
+</div>
+</div>
+        <div class="col-xs-3">
+          <a href="#"><button class="dropbtn">Links</button></a>
+        </div>
+        <div class="col-xs-1">
+        </div>
+      </div>
+    </nav>
+  </div>
+    <div class="container">
+      <section>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Some useful links</h2>
+            <h3>Thinking about coding? Want to dip your feet in the water?</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+      <ul>
         <li><a href="https://www.codeacademy.com" target="_blank">Codeacademy</a> - probably the best place to start if you're
         interested in coding. I've only done the "free" tracks, which are pretty good. Ruby is always recommended
       as an introductory language. Give it a go!</li>
@@ -48,27 +64,60 @@
     community based site. You can complete coding challenges to earn points ("honor"). It gives it a bit more of a
   competitive/gaming edge than Exercism. You can also view other solutions after submitting yours, which is very
   useful. I recommend it.</li>
+</ul>
+<h4>A few Ruby "gems"</h4>
+<ul>
+<li><a href="https://ruby-doc.org/" target="_blank">Ruby Doc</a> - as mentioned above, Ruby is a great
+introductory (and beyond!) language, because it's more readable by a human. It's also a bit more
+forgiving if you make mistakes. Anyway, if you're learning it, this is the one-stop shop for anything you might
+need to know about which commands are available to you in Ruby.</li>
+<li><a href="http://rubular.com/" target="_blank">Rubular</a> - I stumbled upon this site when playing around
+with Ruby "regular expressions" (known as REGEX). This is essentially a way of searching a string of text
+in Ruby by providing a "match" to search for. It can be a real headache, and this is a very handy site to
+quickly test out your expressions.</li>
+</ul>
         </div>
-        <h4>A few Ruby "gems"</h4>
-        <div>
-    <ul class="links-list">
-      <li><a href="https://ruby-doc.org/" target="_blank">Ruby Doc</a> - as mentioned above, Ruby is a great
-      introductory (and beyond!) language, because it's more readable by a human. It's also a bit more
-    forgiving if you make mistakes. Anyway, if you're learning it, this is the one-stop shop for anything you might
-  need to know about which commands are available to you in Ruby.</li>
-    <li><a href="http://rubular.com/" target="_blank">Rubular</a> - I stumbled upon this site when playing around
-      with Ruby "regular expressions" (known as REGEX). This is essentially a way of searching a string of text
-    in Ruby by providing a "match" to search for. It can be a real headache, and this is a very handy site to
-  quickly test out your expressions.</li>
+                </div>
+      </section>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+          <div class="col-sm-7">
+            <p class="text-center">Content by Callum Anderson, 2018
+            </p>
+          </div>
+          <div class="col-sm-5">
+            <p class="text-center"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span id="mailing"></span>
+            </p>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+          <div class="col-sm-6">
+            <p class="text-center"><a href="https://www.linkedin.com/in/callum-anderson-072bb789/" target="_blank"><img src="./img/Logo-2C-21px-R.png" class="img-responsive center-block" alt="LinkedIn logo"/></a>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-center"><a href="https://github.com/callum-anderson" target="_blank"> <img src="./img/GitHub_Logo.png" class="img-responsive center-block" alt="GitHub Logo"/></a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-      <div id="footer">
-        <p>Content by Callum Anderson, 2018&nbsp;&nbsp;<strong>e:</strong>&nbsp;&nbsp;<span id="mailing"></span>&nbsp;&nbsp;
-          <a href="https://www.linkedin.com/in/callum-anderson-072bb789/" target="_blank"><img src="./img/Logo-2C-21px-R.png" alt="LinkedIn logo" width="73px" height="15px"/></a>&nbsp;&nbsp;&nbsp;
-          <a href="https://github.com/callum-anderson" target="_blank"> <img src="./img/GitHub_Logo.png" alt="GitHub Logo" width="58px" height="19px"/></a>
-        </p>
-      </div>
-    </div>
-  <script src="./js/callum_anderson.js" type="text/javascript" charset="utf-8"></script>
-  </body>
-</html>
+    </footer>
+
+      <!-- My custom Javascript -->
+      <script src="./js/callum_anderson.js" type="text/javascript" charset="utf-8"></script>
+      <!-- jQuery library - SHOULD NOT BE REQUIRED
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      -->
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </body>
+      </html>

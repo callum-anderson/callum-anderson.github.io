@@ -1,76 +1,161 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Callum Anderson - About</title>
-    <link rel="stylesheet" type="text/css" href="./css/callum_anderson.css"
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/callum_anderson.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
-    <div id="header">
-      <h1>Callum Anderson</h1>
+    <div id="fixed-header">
+      <header>
+        <div class="row">
+          <div class="col-xs-12" id="header">
+            <h1>Callum Anderson</h1>
+          </div>
+        </div>
+      </header>
+      <nav>
+        <div class="row">
+          <div class="col-xs-1">
+          </div>
+          <div class="col-xs-3">
+            <a href="#"><button class="dropbtn">About</button></a>
+          </div>
+          <div class="col-xs-4 dropdown">
+  <button onclick="blogDropDown()" class="dropbtn">Blog</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="./blog.html#week1">Week 1</a>
+    <a href="./blog.html#week2">Week 2</a>
+    <a href="./blog.html#week3"><i>Week 3 - coming soon!</i></a>
+  </div>
+</div>
+          <div class="col-xs-3">
+            <a href="./links.html"><button class="dropbtn">Links</button></a>
+          </div>
+          <div class="col-xs-1">
+          </div>
+        </div>
+      </nav>
     </div>
-    <div class="navbar">
-      <a href="#">About</a>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Blog
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="./blog.html#week1">Weeks 1-2</a>
-          <!-- <a href="./blog.html#week3">Weeks 3-4</a>
-          <a href="./blog.html#week5">Weeks 5-6</a>
-          <a href="./blog.html#week7">Weeks 7-8</a>
-          <a href="./blog.html#week9">Weeks 9-10</a>
-          <a href="./blog.html#week11">Weeks 11-12</a>
-          <a href="./blog.html#week13">Weeks 13-14</a>
-          <a href="./blog.html#week15">Weeks 15-16</a> -->
+          <div class="container">
+      <section>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Hello! A bit about me...</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>Hi, I'm Callum Anderson, and I'm a member of Cohort E24 at <a href="https://www.codeclan.com">Codeclan</a>.
+            I've created this webpage mainly to share my experiences of learning at CodeClan, as I know I was
+           very interested to hear current/previous students' thoughts before I signed up.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <a href="https://www.codeclan.com"><img src="https://i2.wp.com/codeclan.com/wp-content/uploads/2016/05/CodeClan-Horizontal-RGB.png"
+             class="img-responsive" width="266px" height="97px"  alt="CodeClan logo" target="_blank"/></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <q>So...  who are you??</q>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+            <p>OK, bit of background! I've worked in the NHS for the past decade, in various admin and
+              IT roles. Prior to that, I worked in retail for a number of years, after dropping
+              out of Uni. Definitely a big regret, but, I had my reasons at the time.
+            </p>
+            <p>More recently, I've been involved in project work, which has piqued
+              my interest in software development. I've seen at close quarters how good quality software
+              can be hugely beneficial to the daily activities of staff - saving time, effort and decreasing
+            stress levels. However, I've often thought you know, that's good...  but it could be <em>better</em>.
+          Whenever I've seen repetitive manual tasks carried out on a daily basis, I've thought <em>wouldn't it be
+         so much easier if we had an app which does all that for us?</em>
+            </p>
+            <p>So yes, loads of ideas and inspirations, but equal amounts of frustration because I haven't been able
+           to act on them.
+            </p>
+          </div>
+          <div class="col-sm-3">
+            <img src="./img/callum_photo.jpg" width="343px" height="384px" class="img-responsive blog-img" alt="Photo of Callum Anderson, full height, outside"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <q>He who dares, wins!</q>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>I have dabbled with coding in my spare time, using sites such as
+          <a href="https://www.codeacademy.com" target="_blank">Codeacademy</a> and <a href="https://www.teamtreehouse.com" target="_blank">Treehouse</a>,
+        but I decided that I wanted to take it to the next level and actually become a developer. <em>Somehow.</em>
+            </p>
+            <p>That's when I heard about CodeClan, and how they can fast track you towards becoming a trainee/junior
+          developer in 16 weeks. A long, intense 16 weeks...  putting in a minimum of 60 hours a week. The guys at
+        CodeClan strongly emphasise this, as do the students who have been through it. A part time job while studying
+      isn't recommended, so you're essentially unemployed for 16 weeks. Then there are the course fees, which can be
+    postponed until after the course with a <a href="https://codeclan.com/courses/16-week-course/course-cost/" target="_blank">PCDL
+      loan</a>, which is what I've done.
+            </p>
+            <p>Here's the big draw though - CodeClan don't just teach you how to code. They get you "industry ready", and
+          prep you to find a job at the end of it. They teach you how to learn, which sounds kind of crazy, but I'll
+          go into more detail in my blog. In fact, on that note, I'll stop there - but please do go on to read more
+          in my blog if you're interested. There are contact details at the bottom of the page as well, if you want
+          to ask me anything...  happy to help if I can!
+            </p>
+          </div>
+        </div>
+      </section>
+      </div>
+      <footer>
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+            <div class="col-sm-6">
+              <p class="text-center text-nowrap">Content by Callum Anderson, 2018
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="text-center text-nowrap"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span id="mailing"></span>
+              </p>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+            <div class="col-sm-6">
+              <p class="text-center"><a href="https://www.linkedin.com/in/callum-anderson-072bb789/" target="_blank"><img src="./img/Logo-2C-21px-R.png" class="img-responsive" alt="LinkedIn logo"/></a>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="text-center"><a href="https://github.com/callum-anderson" target="_blank"> <img src="./img/GitHub_Logo.png" class="img-responsive" alt="GitHub Logo"/></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
         </div>
       </div>
-      <a href="./links.html">Links</a>
-    </div>
-  </header>
-    <div id="section">
-      <h2>Hello! A bit about me...</h2>
-      <a href="https://www.codeclan.com"><img class="right images padding" src="https://i2.wp.com/codeclan.com/wp-content/uploads/2016/05/CodeClan-Horizontal-RGB.png"
-      width="271px" height="100px" alt="CodeClan logo" target="_blank"/></a>
-      <p>Hi, I'm Callum Anderson, and I'm a member of Cohort E24 at <a href="https://www.codeclan.com">Codeclan</a>.
-      I've created this webpage mainly to share my experiences of learning at CodeClan, as I know I was
-     very interested to hear current/previous students' thoughts before I signed up.</p>
-      <quote>So...  who are you??</quote>
-      <p>OK, bit of background! I've worked in the NHS for the past decade, in various admin and
-        IT roles. Prior to that, I worked in retail for a number of years, after dropping
-        out of Uni. Definitely a big regret, but, I had my reasons at the time.</p>
+      </footer>
 
-      <img class="right images" src="./img/callum_photo.jpg" width="300px" height="330px" alt="Photo of Callum Anderson, full height, outside"/>
-      <p>More recently, I've been involved in project work, which has piqued
-        my interest in software development. I've seen at close quarters how good quality software
-        can be hugely beneficial to the daily activities of staff - saving time, effort and decreasing
-      stress levels. However, I've often thought you know, that's good...  but it could be <em>better</em>.
-    Whenever I've seen repetitive manual tasks carried out on a daily basis, I've thought <em>wouldn't it be
-   so much easier if we had an app which does all that for us?</em></p>
-   <p>So yes, loads of ideas and inspirations, but equal amounts of frustration because I haven't been able
-     to act on them.
-   <quote>He who dares, wins!</quote>
-        <p>I have dabbled with coding in my spare time, using sites such as
-      <a href="https://www.codeacademy.com" target="_blank">Codeacademy</a> and <a href="https://www.teamtreehouse.com" target="_blank">Treehouse</a>,
-    but I decided that I wanted to take it to the next level and actually become a developer. <em>Somehow.</em></p>
-      <p>That's when I heard about CodeClan, and how they can fast track you towards becoming a trainee/junior
-      developer in 16 weeks. A long, intense 16 weeks...  putting in a minimum of 60 hours a week. The guys at
-    CodeClan strongly emphasise this, as do the students who have been through it. A part time job while studying
-  isn't recommended, so you're essentially unemployed for 16 weeks. Then there are the course fees, which can be
-postponed until after the course with a <a href="https://codeclan.com/courses/16-week-course/course-cost/" target="_blank">PCDL
-  loan</a>, which is what I've done.</p>
-    <p>Here's the big draw though - CodeClan don't just teach you how to code. They get you "industry ready", and
-      prep you to find a job at the end of it. They teach you how to learn, which sounds kind of crazy, but I'll
-      go into more detail in my blog. In fact, on that note, I'll stop there - but please do go on to read more
-      in my blog if you're interested. There are contact details at the bottom of the page as well, if you want
-      to ask me anything...  happy to help if I can!
-    </div>
-    <div id="footer">
-      <p>Content by Callum Anderson, 2018&nbsp;&nbsp;<strong>e:</strong>&nbsp;&nbsp;<span id="mailing"></span>&nbsp;&nbsp;
-        <a href="https://www.linkedin.com/in/callum-anderson-072bb789/" target="_blank"><img src="./img/Logo-2C-21px-R.png" alt="LinkedIn logo" width="73px" height="15px"/></a>&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/callum-anderson" target="_blank"> <img src="./img/GitHub_Logo.png" alt="GitHub Logo" width="58px" height="19px"/></a>
-      </p>
-    </div>
-  <script src="./js/callum_anderson.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- My custom Javascript -->
+<script src="./js/callum_anderson.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery library - SHOULD NOT BE REQUIRED
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+-->
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>

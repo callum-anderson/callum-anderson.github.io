@@ -1,37 +1,56 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Callum Anderson - Blog</title>
-    <link rel="stylesheet" type="text/css" href="./css/callum_anderson.css"
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/callum_anderson.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+        <div id="fixed-header">
     <header>
-    <div id="header">
-      <h1>Callum Anderson</h1>
-    </div>
-    <div class="navbar">
-      <a href="./index.html">About</a>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Blog
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="./blog.html#week1">Weeks 1-2</a>
-          <!-- <a href="./blog.html#week3">Weeks 3-4</a>
-          <a href="./blog.html#week5">Weeks 5-6</a>
-          <a href="./blog.html#week7">Weeks 7-8</a>
-          <a href="./blog.html#week9">Weeks 9-10</a>
-          <a href="./blog.html#week11">Weeks 11-12</a>
-          <a href="./blog.html#week13">Weeks 13-14</a>
-          <a href="./blog.html#week15">Weeks 15-16</a> -->
+      <div class="row">
+        <div class="col-xs-12" id="header">
+          <h1>Callum Anderson</h1>
         </div>
       </div>
-      <a href="./links.html">Links</a>
+    </header>
+    <nav>
+      <div class="row">
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-3">
+          <a href="./index.html"><button class="dropbtn">About</button></a>
+        </div>
+        <div class="col-xs-4 dropdown">
+<button onclick="blogDropDown()" class="dropbtn">Blog</button>
+<div id="myDropdown" class="dropdown-content">
+  <a href="./blog.html#week1">Week 1</a>
+  <a href="./blog.html#week2">Week 2</a>
+  <a href="./blog.html#week3"><i>Week 3 - coming soon!</i></a>
+</div>
+</div>
+        <div class="col-xs-3">
+          <a href="./links.html"><button class="dropbtn">Links</button></a>
+        </div>
+        <div class="col-xs-1">
+        </div>
+      </div>
+    </nav>
+  </div>
+<div class="container">
+  <section>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>CodeClan: The Blog</h2>
+        <h3>Read on to find out about my adventure into the Clan of Code!</h3>
+      </div>
     </div>
-  </header>
-    <div id="section">
-      <h2>CodeClan: The Blog</h2>
-      <h3>Read on to find out about my adventure into the Clan of Code!</h3>
-          <div class="blog">
+
+    <div class="row">
+      <div class="col-xs-12 blog-post">
             <a id="week1">&nbsp;</a>
               <h4>Week 1 <em>- posted 05/08/18</em></h4>
             <p>So, here we are, one week down already! Technically, it's more than that because we were given
@@ -54,7 +73,15 @@
               <p>Things picked up pace as the week progressed, as you'd expect. We covered Ruby arrays and hashes, which
                 are basically just "collections" of things. A way to store a bunch of strings (words) or numbers in a single
                 container object.</p>
-                <quote>If you don't ask, the answer is no.</quote>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <q>If you don't ask, the answer is no.</q>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
                 <p>The actual lessons are quite engaging and interactive - questions are encouraged and I feel I abuse this
                   privilege sometimes (the instructors must be starting to hate me). We also get a quick 5-10 minute break
                   every hour which does help "cool the brain". It's really unlike any other classroom environment I've ever
@@ -62,7 +89,10 @@
                   like they're volunteering to do this, rather than it being their job! There are 3 instructors in the room
                   as well, with one leading at any time while the other 2 chip in occasionally from the back of the room.
                 </p>
-                <img class="right images" src="./img/Callum-CodeClan_newbie.jpg" width="231px" height="311px" alt="Callum holding CodeClan bottle in class"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-7">
                 <p>We also have "Labs" in the afternoon, where we're typically paired up at random with a fellow student, and
                   have to go off to solve some tasks. When I say "go off", we can either stay in the classroom or head out to the
                   communal areas and sit on the comfy couches. This is known in the industry
@@ -73,7 +103,13 @@
                   and she told us that they use Paired Programming where she works now. She said that some of the most skilled and
                   knowledgeable developers aren't necessarily good at working in pairs. Not sure what that tells you, but I found it
                   interesting.</p>
-
+                </div>
+                <div class="col-sm-5">
+                <img src="./img/Callum-CodeClan_newbie.jpg" class="img-responsive blog-img" width="300px" height="400px" alt="Callum holding CodeClan bottle in class"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
                   <p>We're assigned homework at the end of the day, which consists of a MVP (Minimal Viable Product - a term used
                     in the industry) and Extensions (going that bit further). The Extensions are optional, but I managed to do them
                     all in the first week. In the mornings, we have a "stand up" first thing, where we all stand in a circle, pass a
@@ -83,27 +119,42 @@
                     problems to the table yet, but I've no doubt I will in future. I like it, it's a great way to start the day. This
                     is followed by a homework review, which is really about addressing any problems anyone had, rather than going
                     over all of it.</p>
-                    <quote>Life lessons pro gratis.</quote>
-                    <img class="right images" src="./img/pintandchaser.jpg" width="303px" height="353px" alt="A pint of beer and whisky chaser"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <q>Life lessons pro gratis.</q>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-7">
                     <p><strong>Thursday</strong> is no homework night! As it is our first week, I was pleasantly surprised to find out that CodeClan
                       had put up a tab at a local pub. The other two cohorts were invited too, which was great for networking and to
                       quiz them on what was ahead. They are 5 and 10 weeks ahead of us respectively. Some of the instructors also made
                       an appearance which was great. I had a great time <em>but</em>...  made the mistake of heading out on an empty stomach.
                       I suffered for that later. And the next day.
                     </p>
-
                     <p><strong>Friday</strong> was a bit of a break from coding. We had a lesson about active learning, which was very interesting and
                       definitely useful going forward. Then we had a talk from a previous student (Kate), as mentioned earlier, who has gone
                       on to work in a local tech startup. She was fantastic, very down to earth and has a great sense of humour. She also
                       allayed a lot of fears some of us had. She is the only "junior" developer in her firm, and I asked her if she was
                       intimidated by that. She said not really, because they simply don't expect the same level of output from you. I
                       guess that makes sense.</p>
+                    </div>
+                    <div class="col-sm-5">
+                    <img class="img-responsive blog-img" src="./img/pintandchaser.jpg" width="365px" height="323px" alt="A pint of beer and whisky chaser"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
                       <p>We are issued our weekend homework in the afternoon, and some of the guys do it before going home (or as much
                       as they can), and some of us decided to do it all at home. I did the latter, but mainly because my stomach was a
                       bit iffy from the previous night's activities. The homework wasn't too bad though. On to <strong>week 2</strong>!
                     </p>
     </div>
-    <div class="blog">
+  </div>
+  <div class="row">
+    <div class="col-xs-12 blog-post">
                   <a id="week2">&nbsp;</a>
           <h4>Week 2 <em>- posted 12/08/18</em></h4>
       <p>We started on <strong>Monday</strong> with a "stand up" as always, and generally everyone felt the homework was manageable.
@@ -114,7 +165,10 @@
         be honest, it was nice to have a gentle start to the week. I didn't sleep so well on Sunday night, and I was
         thankful for the free coffee supply at CodeClan.
       </p>
-      <img class="right images" src="./img/CC_coffee.jpg" width="350px" height="375px" alt="Pouring coffee in the CodeClan kitchen"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
       <p>We were introduced to the concept of object-oriented programming and classes, which essentially means that everything
         you use is an object of some sort, and it is created from a blueprint (class). To be honest, I knew most of
         this already, but it was a good review. I'm determined not to fall into the complacency trap. If you think you know
@@ -126,6 +180,13 @@
         terms, the bear takes fish from the river and eats them - essentially meaning the bear has one more fish in its stomach, and
         the river contains one less fish. These things always sound so simple, but it takes a fair bit of code just to get to that point.
       </p>
+    </div>
+    <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./img/CC_coffee.jpg" width="361px" height="376px" alt="Pouring coffee in the CodeClan kitchen"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
       <p>We had another lab in the afternoon with a similar real world scenario - this time it was a bus picking up
         passengers from a bus stop. The number of people at the bus stop changes at every pickup, as does the number of
         people on the bus. That one was kind of fun actually, and we were to continue with it in the homework. A comfortable
@@ -138,7 +199,15 @@
         throughout. I've taken to walking down to Princes Street gardens to get away from the noise and pollution, and to just
         empty the mind of all thoughts. It really works - I come back into class refreshed and ready to go again!
       </p>
-      <quote>Do you want to build a Snowman?</quote>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <q>Do you want to build a Snowman?</q>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
       <p><em>Anyway...</em> back to the lab - we were given the choice of two tasks. The first was to create a pub, which obviously
         has drinks, food, and customers. We had to include a check to make sure the customer is over 18 before serving drinks,
         and to refuse to serve them if they're drunk (their "drunkenness" level goes up each time they buy a drink, and down
@@ -153,7 +222,10 @@
         When we returned to class, we were surprised to find that we had to present our workings to the class. It was so frustrating not having
         the final result there to demo, but that's the way the cookie crumbles.
       </p>
-      <img class="right images" src="./img/CC_classroom.jpg" width="281px" height="342px" alt="Studying alone in the CodeClan classroom"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
       <p>We decided to stay back at the end because we were both so determined to reach the finished product. We managed to get
         that done within half an hour. Again - <em>so</em> infuriating that we didn't have it ready in time for the presentation! Still, it
         was satisfying to finish it off before we left for the day. Our homework task was to review the solution for the <em>other</em> task
@@ -166,6 +238,13 @@
         "for each customer that enters the restaurant, give them a menu". No homework that night, and I decided to get an early
         night to catch up on my sleep. No shenanigans this week!
       </p>
+    </div>
+        <div class="col-sm-5">
+          <img class="img-responsive blog-img" src="./img/CC_classroom.jpg" width="378px" height="428px" alt="Studying alone in the CodeClan classroom"/>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
       <p>We were handed our homework after stand up on <strong>Friday</strong>, and started on that at about 10:30. Most of us headed out to the lounge area,
         it just makes for a nice change of scenery from the classroom. The task this weekend was to create a sort of karaoke club management
         system. So, the club would have a bar, private rooms, guests/punters, songs/playlists and drink/food. So, similar to the pub task on
@@ -183,7 +262,9 @@
         be completed in various ways. It's great to see the alternative solutions, they could come in handy in future! So that's it, on to
         <strong>week 3</strong> of the long and winding code!
       </p>
-</div>
+    </div>
+    </div>
+
 <!-- <div class="blog">
                     <a id="week3">&nbsp;</a>
   <h4>Week 3</h4>
@@ -268,14 +349,47 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
                   </p>
 </div> -->
+</section>
     </div>
-      <div id="footer">
-        <p>Content by Callum Anderson, 2018&nbsp;&nbsp;<strong>e:</strong>&nbsp;&nbsp;<span id="mailing"></span>&nbsp;&nbsp;
-          <a href="https://www.linkedin.com/in/callum-anderson-072bb789/" target="_blank"><img src="./img/Logo-2C-21px-R.png" alt="LinkedIn logo" width="73px" height="15px"/></a>&nbsp;&nbsp;&nbsp;
-          <a href="https://github.com/callum-anderson" target="_blank"> <img src="./img/GitHub_Logo.png" alt="GitHub Logo" width="58px" height="19px"/></a>
-        </p>
+
+    <footer>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+          <div class="col-sm-7">
+            <p class="text-center">Content by Callum Anderson, 2018
+            </p>
+          </div>
+          <div class="col-sm-5">
+            <p class="text-center"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span id="mailing"></span>
+            </p>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+          <div class="col-sm-6">
+            <p class="text-center"><a href="https://www.linkedin.com/in/callum-anderson-072bb789/" target="_blank"><img src="./img/Logo-2C-21px-R.png" class="img-responsive center-block" alt="LinkedIn logo"/></a>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-center"><a href="https://github.com/callum-anderson" target="_blank"> <img src="./img/GitHub_Logo.png" class="img-responsive center-block" alt="GitHub Logo"/></a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    </footer>
+
+  <!-- My custom Javascript -->
   <script src="./js/callum_anderson.js" type="text/javascript" charset="utf-8"></script>
-  </body>
-</html>
+  <!-- jQuery library - SHOULD NOT BE REQUIRED
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  -->
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+  </html>
