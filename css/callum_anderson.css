@@ -82,6 +82,7 @@ q {
   font-size: 1.5em;
   color: #444;
   margin: 1em auto;
+  white-space: nowrap;
 }
 q:before {
     content: '\201C';
