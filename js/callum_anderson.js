@@ -15,15 +15,29 @@ window.onclick = function(e) {
 }
 
 //Image modal
-var modal = document.getElementsByClassName('img-modal')[0];
-var modalImg = document.getElementsByClassName('blog-img')[0];
-modalImg.onclick = function(){
-  modal.style.display = "block";
-}
-var closeSpan = document.getElementsByClassName('img-modal-close')[0];
-closeSpan.onclick = function() {
-  modal.style.display = "none";
-}
+var modal = document.getElementById('img-modal');
+var modalImg = document.getElementsByClassName('blog-img');
+
+for (i=0; i<modalImg.length; i++)
+  {
+    modalImg[i].onclick = function(){
+      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      if (width > 767) {
+      modal.style.display = "block";
+      modal.children[1].src = this.src.replace("thumbs", "img")
+      modal.children[1].alt = this.alt
+    }
+    }
+  }
+modalImg
+var closeSpan = document.getElementsByClassName('img-modal-close');
+for (i=0; i<closeSpan.length; i++)
+  {
+    closeSpan[i].onclick = function() {
+      modal.style.display = "none";
+    }
+  }
+
 
 
 // Insert email contact in footer on page load (to avoid bots scraping email address)
