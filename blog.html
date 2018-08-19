@@ -29,7 +29,7 @@
 <div id="myDropdown" class="dropdown-content">
   <a href="./blog.html#week1">Week 1</a>
   <a href="./blog.html#week2">Week 2</a>
-  <a href="./blog.html#week3"><i>Week 3 - coming soon!</i></a>
+  <a href="./blog.html#week3">Week 3</a>
 </div>
 </div>
         <div class="col-xs-3">
@@ -153,6 +153,7 @@
                     </p>
     </div>
   </div>
+
   <div class="row">
     <div class="col-xs-12 blog-post">
                   <a id="week2">&nbsp;</a>
@@ -265,90 +266,267 @@
     </div>
     </div>
 
-<!-- <div class="blog">
+    <div class="row">
+      <div class="col-xs-12 blog-post">
                     <a id="week3">&nbsp;</a>
-  <h4>Week 3</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
+  <h4>Week 3 <em>- posted 19/08/18</em></h4>
+</div>
+</div>
+  <div class="row">
+    <div class="col-xs-12">
+  <p>Into week 3 and admittedly the novelty has worn off a little, but I'm still enjoying it a
+    great deal. When I got in on <strong>Monday</strong> morning, we had our usual catch up before the
+    instructors arrived. Most of us agreed that it was so much easier getting out of bed in the
+    mornings; we all chose to be there and have the same desire to learn.
+</p>
+<p>
+We started the week with an introduction to database queries, in the form of PostgreSQL. For
+those unfamiliar with the concept of databases, it's essentially like a collection of data
+tables that connect with each other.
+<a href="https://www.w3schools.com/sql/sql_intro.asp" target="_blank">SQL (Structured Query
+  Language)</a> is the set of instructions
+you give to the database to get data back. Up to this point, everything we've coded has only lived
+in memory. In other words, you can run the program and make changes, but it's all reset/lost once
+you close it. Now, we're able to save information into the database to call on again later. This
+is known as data "persistence".
+OK, the database is stored on our laptops and only we can get to it; but it's still an important
+milestone!
+</p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+    <p>
+<strong>Tuesday</strong> was a continuation of learning about databases. There is a lot to learn
+and we've only really scratched the surface at this point. I have some knowledge of SQL queries
+which does help a bit, but it's still been a bit of a struggle getting the syntax right. In the
+world of literature or printed media, leaving a comma or semi-colon out of a sentence might be
+frowned upon by the grammar police. In programming - the entire thing grinds to a halt.<br>
+One of
+the key skills taught by CodeClan is how to understand error messages, in order to pinpoint the
+fault and correct it. It's extremely frustrating at this stage, because we're all repeatedly
+making avoidable errors. I guess it's similar to learning a new language or learning to play an
+instrument - sometimes you take a step back for every two forward.
+</p>
+<p>
+Getting back to databases, we learned about "one to one" (rarely used), "one to many" and "many
+to many" database relationships. In real terms, "one to many" could be like someone's shoe
+collection - one person and many pairs of shoes. "Many to many" might be musicians and songs. A
+musician has many songs, and a popular song might be played by many musicians.<br>
+Up to this point, we'd been using a pizza shop model as a working example. We mimicked a customer
+ordering pizzas. So again, a customer could place many orders, which would be a "one to many"
+relationship.
+</p>
+</div>
+<div class="col-sm-5">
+  <img class="img-responsive blog-img" src="./img/CC_week_board.jpg" width="393px" height="512px" alt="CodeClan whiteboard displaying Cohort E24 week 3 agenda"/>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+The task for the lab on <strong>Wednesday</strong> was to create a music database. Right up my
+street! I'm hoping to learn how to build an app to help manage my music collection - which is all in MP3
+format - after this course. I don't tend to stream music from services such as Spotify, just
+because I like to listen to exactly what I want and where I want; with or without an Internet
+connection. I don't like the idea of Spotify (other streaming services are available) suddenly
+removing music from a playlist I've taken the time to create. So that's a bit of a personal goal
+for "later".
+</p>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <q>The Logical Songs</q>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+<p>
+Anyway, the lab task was to create a music database containing artists and albums. We had to
+write methods (otherwise known as functions - which is just a piece of code that "does
+something") to add, update, display or delete artists or albums. The tricky part here was that
+if you delete an artist, all albums by that album would have to be deleted automatically too.
+The same goes for albums - if you delete all albums by an artist, that artist had to go. This is
+why the tables have to talk to each other, because otherwise they'd become horribly out of sync!
+When I got home, I decided to import a portion of my music collection into the database to test
+it out. That took longer than I thought it would. I suppose I wanted to validate it, by giving
+it a real world use.<br>
+I might add that it took me twice as long to get home because there was a concert on in Princes
+St gardens, as part of the Edinburgh Fringe festival. Rag 'n' Bone Man, I'm told. I usually
+cut through the gardens to get to CodeClan, but they were closed off. The buses also struggled
+to get through because Princes Street was mobbed. It made for a <em>very</em> long day.
+</p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+    <p>
+On <strong>Thursday</strong>, we moved on to "many to many" databases. The first example we
+worked through was a sort of "Trip Advisor"-style database. A location would have many visitors,
+and a visitor would have many locations that they've visited. Behind the scenes, you need 3
+tables - one for locations, one for visitors, and one in the middle (visits) to link them. The
+tricky part was to get to the location table from the visitor table or vice versa, by using
+something known as "joins" on the tables. It was a tricky concept at first, but it made sense
+once we'd been through it in the afternoon lab.
+</p>
+  <p>
+I must say I was very tired by the time I got
+home. It was "no homework" night, but for me it was straight to bed and don't pass go.
+</p>
+</div>
+<div class="col-sm-5">
+  <img class="img-responsive blog-img" src="./img/W3_NRS_SQL_code.jpg" width="455px" height="342px" alt="National Records of Scotland leaflet beside Macbook displaying code"/>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+I arrived fully recharged and full of vigor on <strong>Friday</strong>. No need for coffee, so
+I had some mint tea while the homework was handed out. There is a whiteboard at the back of the
+classroom where we can write down anything we'd like to go over again on Friday, but so far we
+haven't needed to do that.
+</p>
+<p>
+There was a talk at noon from
+<a href="https://www.nrscotland.gov.uk" target="_blank">National Records of Scotland</a>, which
+was very interesting. They handle birth, death and marriage certificates; as well as the
+national census which takes place every decade. They hold records dating back to the 12th
+century, so you can imagine digitization is high on the agenda for them these days.<br>
+There were a couple of questions asked by students at the end, which sparked a
+discussion about the pros and cons of working in the public sector; as opposed to the private
+sector. Their director of IT was there, and he told us that he took a considerable pay cut when
+he left Tesco to join them, and that he has no regrets because he enjoys his job more now.
+That's very much how I feel - I want to do something I'm passionate about.
+</p>
+<p>
+Homework for the weekend was similar to what we've been doing for most of the week. This time we
+had to build a cinema, with films and customers. We'd use cinema tickets to connect the two, and
+the homework extensions involved adding screening times. That was the most challenging part
+because - for the first time - we were using more than 3 tables in the database. And that's a
+wrap for <strong>week 3</strong>!
+</p>
+</div>
+</div>
+
+</div>
+<!--     <div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week4">&nbsp;</a>
+  <h4>Week 4 <em>- posted XX/XX/18</em></h4>
+  <p>
   </p>
 </div>
-<div class="blog">
-                      <a id="week4">&nbsp;</a>
-    <h4>Week 4</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week5">&nbsp;</a>
+  <h4>Week 5 <em>- posted XX/XX/18</em></h4>
+  <p>
   </p>
 </div>
-<div class="blog">
-                        <a id="week5">&nbsp;</a>
-      <h4>Week 5</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week6">&nbsp;</a>
+  <h4>Week 6 <em>- posted XX/XX/18</em></h4>
+  <p>
   </p>
 </div>
-<div class="blog">
-                          <a id="week6">&nbsp;</a>
-        <h4>Week 6</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week7">&nbsp;</a>
+  <h4>Week 7 <em>- posted XX/XX/18</em></h4>
+  <p>
   </p>
 </div>
-<div class="blog">
-                            <a id="week7">&nbsp;</a>
-          <h4>Week 7</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week8">&nbsp;</a>
+  <h4>Week 8 <em>- posted XX/XX/18</em></h4>
+  <p>
   </p>
 </div>
-<div class="blog">
-                              <a id="week8">&nbsp;</a>
-            <h4>Week 8</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week9">&nbsp;</a>
+  <h4>Week 9 <em>- posted XX/XX/18</em></h4>
+  <p>
   </p>
 </div>
-  <div class="blog">
-                                  <a id="week9">&nbsp;</a>
-              <h4>Week 9</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-    </p>
-    </div>
-    <div class="blog">
-                                        <a id="week10">&nbsp;</a>
-                <h4>Week 10</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-      </p>
-      </div>
-      <div class="blog">
-                                                <a id="week11">&nbsp;</a>
-                  <h4>Week 11</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-        </p>
-        </div>
-        <div class="blog">
-                                                          <a id="week12">&nbsp;</a>
-                    <h4>Week 12</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-          </p>
-          </div>
-          <div class="blog">
-                                                                      <a id="week13">&nbsp;</a>
-                      <h4>Week 13</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-            </p>
-            </div>
-            <div class="blog">
-                                                                                    <a id="week14">&nbsp;</a>
-                        <h4>Week 14</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-              </p>
-              </div>
-              <div class="blog">
-                                                                                                    <a id="week15">&nbsp;</a>
-                          <h4>Week 15</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-                </p>
-                </div>
-                <div class="blog">
-                                                                <a id="week16">&nbsp;</a>
-                            <h4>Week 16</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum essent dicta, discessimus. Cum praesertim illa perdiscere ludus esset. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Eadem nunc mea adversum te oratio est. Re mihi non aeque satisfacit, et quidem locis pluribus. Polemoni et iam ante Aristoteli ea prima visa sunt, quae paulo ante dixi. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus;
-                  </p>
-</div> -->
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week10">&nbsp;</a>
+  <h4>Week 10 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week11">&nbsp;</a>
+  <h4>Week 11 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week12">&nbsp;</a>
+  <h4>Week 12 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week13">&nbsp;</a>
+  <h4>Week 13 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week14">&nbsp;</a>
+  <h4>Week 14 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week15">&nbsp;</a>
+  <h4>Week 15 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 blog-post">
+                    <a id="week16">&nbsp;</a>
+  <h4>Week 16 <em>- posted XX/XX/18</em></h4>
+  <p>
+  </p>
+</div>
+</div>
+   -->
 </section>
     </div>
 

@@ -17,5 +17,6 @@ window.onclick = function(e) {
 // Insert email contact in footer on page load (to avoid bots scraping email address)
 
 window.onload = function() {
-  document.getElementById("mailing").innerHTML = "callum_anderson@hotmail.com";
+  document.getElementById("mailing").innerHTML =
+    "<a href='mailto:callum_anderson@hotmail.com' target='_blank'>callum_anderson@hotmail.com</a>";
 }
