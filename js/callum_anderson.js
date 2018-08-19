@@ -14,6 +14,18 @@ window.onclick = function(e) {
   }
 }
 
+//Image modal
+var modal = document.getElementsByClassName('img-modal')[0];
+var modalImg = document.getElementsByClassName('blog-img')[0];
+modalImg.onclick = function(){
+  modal.style.display = "block";
+}
+var closeSpan = document.getElementsByClassName('img-modal-close')[0];
+closeSpan.onclick = function() {
+  modal.style.display = "none";
+}
+
+
 // Insert email contact in footer on page load (to avoid bots scraping email address)
 
 window.onload = function() {
