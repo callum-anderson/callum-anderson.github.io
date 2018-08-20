@@ -51,6 +51,11 @@ for (i=0; i<collapser.length; i++)
         panel.style.display = "block";
         this.children[1].innerHTML = '-';
     }
+    if (panel.style.maxheight) {
+      panel.style.maxheight = null;
+    } else {
+      panel.style.maxheight = panel.scrollHeight + 'px';
+    }
     }
   }
 

@@ -124,12 +124,12 @@ max-height: 90vh;
 }
 section > a {
   position: relative;
-  top: -85px;
+  top: -100px;
 }
 section > h4 {
   background-color: #f1f1f1;
   position: relative;
-  padding: 1em;
+  padding: 0.8em;
   border-radius: 10px;
   border: 1px solid darkgray;
 }
