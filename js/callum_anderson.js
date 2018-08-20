@@ -29,7 +29,7 @@ for (i=0; i<modalImg.length; i++)
     }
     }
   }
-modalImg
+
 var closeSpan = document.getElementsByClassName('img-modal-close');
 for (i=0; i<closeSpan.length; i++)
   {
@@ -38,6 +38,21 @@ for (i=0; i<closeSpan.length; i++)
     }
   }
 
+//Blog sections accordian
+var collapser = document.getElementsByClassName('blog-post')
+for (i=0; i<collapser.length; i++)
+  {
+    collapser[i].onclick = function() {
+      var panel = this.nextElementSibling;
+      if (panel.style.display === 'block') {
+        panel.style.display = "none";
+        this.children[1].innerHTML = '+';
+      } else {
+        panel.style.display = "block";
+        this.children[1].innerHTML = '-';
+    }
+    }
+  }
 
 
 // Insert email contact in footer on page load (to avoid bots scraping email address)
