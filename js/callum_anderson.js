@@ -45,17 +45,16 @@ for (i=0; i<collapser.length; i++)
     collapser[i].onclick = function() {
       var panel = this.nextElementSibling;
       if (panel.style.display === 'block') {
+        panel.style.maxHeight = 0;
         panel.style.display = "none";
         this.children[1].innerHTML = '+';
       } else {
         panel.style.display = "block";
+        // panel.style.maxHeight = panel.scrollHeight + 'px';
+        panel.style.maxHeight = '2000px';
         this.children[1].innerHTML = '-';
     }
-    if (panel.style.maxheight) {
-      panel.style.maxheight = null;
-    } else {
-      panel.style.maxheight = panel.scrollHeight + 'px';
-    }
+
     }
   }
 

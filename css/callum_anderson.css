@@ -132,10 +132,15 @@ section > h4 {
   padding: 0.8em;
   border-radius: 10px;
   border: 1px solid darkgray;
+  /* transition: 1s; */
 }
 section > h4:hover {
   background-color: #ddd;
   border: 1px solid black;
+}
+article {
+  max-height: 2000px;
+  transition: max-height 1s;
 }
 .collapser {
   position: absolute;
