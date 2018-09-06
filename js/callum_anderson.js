@@ -1,3 +1,10 @@
+// Insert email contact in footer on page load (to avoid bots scraping email address)
+
+window.onload = function() {
+  document.getElementById("mailing").innerHTML =
+    "<a href='mailto:callum_anderson@hotmail.com' target='_blank'>callum_anderson@hotmail.com</a>";
+}
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function blogDropDown() {
@@ -57,11 +64,3 @@ for (i=0; i<collapser.length; i++)
 
     }
   }
-
-
-// Insert email contact in footer on page load (to avoid bots scraping email address)
-
-window.onload = function() {
-  document.getElementById("mailing").innerHTML =
-    "<a href='mailto:callum_anderson@hotmail.com' target='_blank'>callum_anderson@hotmail.com</a>";
-}
