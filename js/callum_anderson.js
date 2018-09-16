@@ -32,9 +32,13 @@ for (i=0; i<modalImg.length; i++)
       const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
       if (width > 767) {
         modal.style.display = "block";
-        modal.style.visibility = "visible";
-        modal.children[1].src = this.src.replace("thumbs", "img");
-        modal.children[1].alt = this.alt;
+        const modalImg = modal.children[1];
+        modalImg.src = this.src.replace("thumbs", "img");
+        modalImg.alt = this.alt;
+        if(!modalImg.classList.contains('zoomin'))
+          {
+            modalImg.classList.add('zoomin');
+          }
       }
     }
   };
@@ -43,28 +47,26 @@ const closeSpan = document.querySelectorAll('.img-modal-close');
 for (i=0; i<closeSpan.length; i++)
   {
     closeSpan[i].onclick = function() {
-      const imgModal = this.parentNode;
-      imgModal.style.display = "none";
+      this.nextElementSibling.classList.remove('zoomin');
+      this.parentNode.style.display = "none";
     };
   }
 });
 
-//Blog sections accordian
+//Blog sections 'accordian'
 document.addEventListener('DOMContentLoaded', () => {
   const collapser = document.querySelectorAll('.blog-post')
   for (i=0; i<collapser.length; i++)
     {
-      collapser[i].onclick = function() {
+      collapser[i].addEventListener('click', function() {
         const panel = this.nextElementSibling;
-        if (panel.style.display === 'block') {
-          panel.style.maxHeight = 0;
-          panel.style.display = "none";
-          this.children[1].innerHTML = '+';
-        } else {
-          panel.style.display = "block";
-          panel.style.maxHeight = '2000px';
-          this.children[1].innerHTML = '-';
-        }
-      }
+
+        panel.classList.toggle('collapsed');
+        if (panel.classList.contains('collapsed')) {
+                this.children[1].innerHTML = '+';
+              } else {
+                this.children[1].innerHTML = '-';
+              }
+      });
     }
 });
