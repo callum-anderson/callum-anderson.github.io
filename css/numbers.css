@@ -1,0 +1,83 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+header, nav, main {
+  z-index: 2;
+  width: 85vw;
+  margin: 0 auto;
+}
+header > h1 {
+  width: 95%;
+  margin: 0.5em auto;
+}
+nav, main {
+  padding: 1em;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 0.5em 0.2em lightgray;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.95);
+}
+main {
+  position: relative;
+  min-height: 2em;
+  padding: 0 auto 1em;
+  margin: 1em auto;
+}
+main > p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 3vh;
+  font-weight: bold;
+  text-align: center;
+}
+.forms-div {
+  margin: 1em 0;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+form {
+  min-width: 200px;
+  padding: 0.5em 1em;
+  display: grid;
+  grid-row-gap: 1em;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+}
+form > input[type='submit'] {
+  grid-column-start: 2;
+  width: 50%;
+}
+#random-form > input {
+  grid-column-start: 1;
+  width: 100%;
+  margin: 0.8em 0;
+}
+form #date-wrapper {
+  white-space: nowrap;
+}
+.random-number {
+  position: absolute;
+  display: inline-block;
+}
+@media only screen and (max-width: 767px) {
+  form {
+    width: 80vw;
+  }
+  main > p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+  }
+  form > input {
+    font-size: 100%;
+  }
+  .forms-div {
+    margin: 0.5em 0;
+  }
+  nav, main {
+    padding: 0.5em;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/bundle.js"></script>
+    <link rel="stylesheet" href="css/numbers.css" type="text/css">
+    <title>Numbers</title>
+  </head>
+  <body>
+    <header>
+      <h1>Number Facts</h1>
+    </header>
+    <nav>
+      <p>Enter a number, year or date (format: dd/mm) to display an interesting fact...</p>
+      <div class="forms-div">
+        <form id="number-form">
+          <label for="number">Number: </label>
+          <input type="number" name="number">
+          <input type="submit" value="Go!">
+        </form>
+        <form id="year-form">
+          <label for="year">Year: </label>
+          <input type="number" name="year">
+          <input type="submit" value="Go!">
+        </form>
+        <form id="date-form">
+          <label for="date">Date : </label>
+          <div id="date-wrapper">
+            <input type="number" min="1" max="31" name="day"> / <input type="number" min="1" max="12"  name="month">
+          </div>
+          <input type="submit" value="Go!">
+        </form>
+      </div>
+      <div class="forms-div">
+        <p>...or click on Random to return a random number!</p>
+        <form id="random-form">
+          <input type="submit" value="Random">
+        </form>
+      </div>
+    </nav>
+    <main>
+
+    </main>
+  </body>
+</html>

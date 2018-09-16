@@ -17,48 +17,44 @@
 nav {
   background-color: #444;
 }
-
 .dropbtn {
-    background-color: #444;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin: 0;
+  background-color: #444;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
 }
-
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #777;
+  background-color: #777;
 }
-
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
-
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
-
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
-
-.dropdown-content a:hover {background-color: #ddd}
-
-.show {display:block;}
-
+.dropdown-content a:hover {
+  background-color: #ddd
+}
+.show {
+  display:block;
+}
 section p, ul {
   font-size: 1.3em;
   margin: 1em auto;
@@ -71,9 +67,9 @@ img {
   width: 100%;
 }
 .blog-img {
-border: 2px solid darkgray;
-border-radius: 10px;
-cursor: pointer;
+  border: 2px solid darkgray;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .blog-img:hover {
   opacity: 0.8;
@@ -90,24 +86,26 @@ cursor: pointer;
   background-color: rgba(0,0,0,0.9);
   z-index: 3;
   padding-top: 10px;
+  opacity: 1;
+  transition: opacity 1s;
 }
 .img-modal-content {
-max-height: 90vh;
+  max-height: 90vh;
   max-width: 90%;
   margin: 0 auto;
-  -webkit-animation-name: zoom;
+  /* -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.5s;
   animation-name: zoom;
-  animation-duration: 0.5s;
+  animation-duration: 0.5s; */
 }
-@-webkit-keyframes zoom {
+/* @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
 @keyframes zoom {
   from {transform:scale(0)}
   to {transform:scale(1)}
-}
+} */
 .img-modal-close {
   position: absolute;
   top: 15px;
@@ -132,7 +130,6 @@ section > h4 {
   padding: 0.8em;
   border-radius: 10px;
   border: 1px solid darkgray;
-  /* transition: 1s; */
 }
 section > h4:hover {
   background-color: #ddd;
@@ -158,20 +155,20 @@ q {
   white-space: nowrap;
 }
 q:before {
-    content: '\201C';
-    left: -5%;
+  content: '\201C';
+  left: -5%;
  }
  q:after {
-     content: '\201D';
-     left: 5%;
+   content: '\201D';
+   left: 5%;
   }
 q:after, q:before {
-    position: relative;
-    top: 0;
-    color: rgba(200,200,200,0.5);
-    font-family: Sanchez, serif;
-    font-size: 1.8em;
-    z-index: -1;
+  position: relative;
+  top: 0;
+  color: rgba(200,200,200,0.5);
+  font-family: Sanchez, serif;
+  font-size: 1.8em;
+  z-index: -1;
  }
  footer {
    font-weight: bold;
