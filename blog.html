@@ -799,23 +799,23 @@ wrap for <strong>week 3</strong>!
 <div class="row">
       <div class="col-xs-12">
         <p>
-          We didn't realise it on <strong>Monday</strong>, but we were about to start one of the most
-          difficult weeks of the course. Notoriously difficult, we were told later! Incidentally, I don't
-          think I've mentioned that we are the first cohort to be taught Javascript before Java - every
-          other cohort to date has been taught Java first (that's 30 previous cohorts, in case you're
+          We didn't realise it on <strong>Monday</strong>, but we were about to embark on one of the most
+          difficult weeks of the course. "Notoriously difficult", we were told later! Incidentally, I don't
+          think I've mentioned that we are the first cohort to be taught Javascript <em>before</em> Java - every
+          other cohort to date has been taught Java first (that's 30 cohorts prior to us, in case you're
           wondering). I'm not sure why it was changed, but I actually don't mind as I've used Javascript
           before.
         </p>
         <p>
-        So, the first thing on the agenda was a modular pattern known as "PubSub". We covered events in the
+        So, the first thing on the agenda was a modular pattern known as "PubSub". We covered "events" in the
         previous week, which are things that happen on the webpage - such as a click or scroll event. The
         idea behind PubSub is to split your code up into areas which publish events, and areas which
         subscribe to published events. Let's say you had a text input that you fill out, click a button,
         and then that text appears on the page. PubSub allows you to publish that text as an event, which
         your code can subscribe to and output it to the page. It involves splitting your code up across
         multiple files, all of which have to talk to each other. We were wondering if it was worth the
-        effort, when we could do the same thing all in one file! We were told that when you scale up your
-        apps into more complexity, the PubSub pattern really starts to pay off.
+        effort; when we could easily do the same thing in a single file! We were assured that when you scale
+        up your apps into more complexity, the PubSub pattern really starts to pay off.
         </p>
       </div>
     </div>
@@ -826,10 +826,13 @@ wrap for <strong>week 3</strong>!
         used to the pattern and trying to get past all the frustrating errors and mismatches it brings
         about. By the end of the day, I think I had it down. I couldn't write all the code without
         referring to a previous example; but I did understand what the code was doing. That's the main
-        thing. In fact, a big part of coding involves regular searches on the Internet. Sometimes it's
-        just to check the syntax, which is slightly different for each programming language. At other
-        times, you have an idea of what you want to achieve, and you just need to find out which tools
-        (functions or methods) are available for you to achieve it.
+        thing.
+      </p>
+      <p>
+        In fact, a big part of coding involves regular searches on the Internet. Sometimes it's
+        just a quick search to check the syntax, which is slightly different for each programming language.
+        At other times, you have an idea of what you want to achieve, and you just need to find out which
+        tools (functions or methods) are available for you to achieve it.
         </p>
       </div>
         <div class="col-sm-5">
@@ -843,86 +846,101 @@ wrap for <strong>week 3</strong>!
       <div class="row">
         <div class="col-xs-12">
         <p>
-        Things got a little more exciting on <strong>Wednesday</strong>, as we were introduced to APIs.
-        This stands for
-        <a href="https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82" target="_blank">Application Programming Interfaces</a>.
+        Things got a little more exciting on <strong>Wednesday</strong>, when we were introduced to APIs.
+        API stands for
+        <a href="https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82" target="_blank">Application Programming Interface</a>.
         I think the last word - interface - describes them best. Basically, that's what they are -
         interfaces provided for you to connect to another application. In actual fact, most people will be
-        more familiar with them than they might think. If you've ever been on a webpage and seen a Facebook
-        or Twitter feed integrated into it - that's achieved by an API.<br>
+        more familiar with them than they might think. If you've ever been on a webpage and noticed a Facebook
+        or Twitter feed integrated into it - that's achieved by using an API.<br>
 
-        Our first attempt at connecting via an API was to load information about the countries of the
-        world, and then filter through it to find regions, continents etc. This information is provided for
+        Our first attempt at connecting via an API involved retrieving information about the countries of the
+        world, and then filtering through it to find regions, continents etc. This information is provided for
         free at <a href="https://restcountries.eu/" target="_blank">https://restcountries.eu/</a>. I have
-        no idea why it's provided for free, but we were all equally grateful and impressed. There are
+        no idea why it's provided for free, but we were all as grateful as we were impressed. There are
         actually loads of free APIs you can use, as we were to discover later. Anyway, we were able to
-        connect to the API, and retrieve the full list of countries, and then filter that on the webpage
+        connect to the API, retrieve the full list of countries; and then filter that on the webpage
         in order to display a particular country and the associated information. We even managed to get the
         flag of that country to display as an image. One of my classmates told me that she showed it to her
-        grandchildren when she got home, and they were very entertained by it! That's actually quite
-        impressive, in this world full of apps and on-demand content.
+        grandchildren when she got home, and that they were thoroughly entertained by it! That's actually quite
+        something, in this world full of apps and on-demand content.
         </p>
         <p>
         By <strong>Thursday</strong>, we were all fairly well acquainted with both PubSub and APIs, I
         think. There was one more topic to cover this week, which was a fairly new Javascript feature
         called "promises". These are related to requests made to APIs, and are quite aptly named. They're
-        used to execute code once a response has been received from an API. Clearly a response won't be
-        received instantly, unless you have a super fast connection; but even then there will be a small
+        used to execute code once a response has been received from an API. Clearly, a response won't be
+        received instantly, unless you have a super fast connection. Even then, there will be a small
         delay. Javascript is an asynchronous language, which essentially means that it doesn't wait for
         one line of code to complete before moving on to the next. This is, of course, a good thing. As
-        Javascript is mainly used for webpages, you can imagine how slow pages would load if it only did
-        one line of code at any one time before moving on to the next. This is also known as a
+        Javascript is mainly used for webpages, you can imagine how slow pages would load if it only
+        processed one line of code at any one time before moving on to the next. This is also known as a
         <a href="https://www.youtube.com/watch?v=aVLjh8A6OGU" target="_blank">non-blocking language</a>.
         As I said, it is a good thing, but it does make it tricky if you need lines of code to run in a
-        specific timed sequence. That's where promises help - as the next line of code related to that API
-        request will run when the response from the request is received. I suppose it is as it sounds - "I
-        promise to do this when I get the response".
+        specific and timed sequence. That's where promises help - as the next line of code related to that API
+        request will run when the response from the request is received. I suppose it is exactly as it
+        sounds - "I promise to do this when I get the response".
         </p>
-
+        <div class="col-xs-12">
+          <q>I can move.repeat(3) any mountain</q>
+        </div>
         <p>
-        The afternoon lab was a bit tricky, we were to connect to an API returning a collection of all the
-        Munros (ie. mountains in Scotland over 3000 feet tall). That wasn't the tricky part, it was filtering
-        by region <em>and</em> being able to return to the unfiltered list again. We were paired up for this,
-        and unfortunately we didn't quite complete the entire exercise. In fact, noone did. It was really
-        bugging me though, because we were so close.<br>
+        The afternoon lab was a bit tricky. We were to connect to an API returning a collection of all the
+        Munros (ie. mountains in Scotland over 3000 feet tall). That wasn't the tricky part; the challenge lay
+        in trying to filter by region <em>and</em> being able to return to the unfiltered list again. We were
+        paired up for this lab, and unfortunately we didn't quite complete the entire exercise. In fact, I don't
+        think anybody did. It was really bugging me though, because we were so close.<br>
 
-        I forgot to mention that this week, a new cohort started - E24 - so we were no longer the newbies! As
+        I forgot to mention that a new cohort started this week - E24 - so we were no longer the newbies! As
         per our first week, we were all invited to the local pub (The Chanter) to get to know each other at
         the end of the day. I had hoped to speak to some of the new guys, but unfortunately we were assigned
-        three big tables and the new cohort congregated around one table, so it was difficult to chat to
+        three big tables and the new cohort congregated around one table; so it was difficult to chat to
         them. Never mind, I found myself sitting next to some of the instructors, and inevitably found myself
         in the middle of a debate about which methods performed best when sorting data. Just your usual pub
-        chat! I didn't stay long though - I wanted to get home to complete the Munros task. I did manage to
-        do that, which was quite satisfying.
+        chat! I didn't stay long though - I wanted to get home to ahve another go at the Munros task. I did
+        manage to complete it this time, which was quite satisfying.
+        </p>
+        <p>
+        Our homework issued on <strong>Friday</strong> morning involved researching and choosing an API,
+        and then creating a webpage which connects to that API. I had a quick look over a list of free
+        APIs, before heading out to the main area to attend a talk from
+        <a href="https://www.list.co.uk/" target="_blank">The List</a>. If you're no familiar, they
+        essentially provide a "list" of events taking place in Edinburgh and Glasgow mainly, but have
+        expanded out across the UK in recent times. The gentleman presenting (I didn't catch his name) was
+        one of the original founders in 1985, and I was very impressed by his passion and enthusiasm.
+        There was more to it than simply listing events too. For example, the police and transport
+        services subscribe to them to receive information about which events are taking place, and
+        the numbers expected to attend. Hotels are also interested, to manage yield. That probably explains
+        why hotel prices shoot up whenever something is happening in that area on a particular date.<br>
+        He mentioned that they're looking for staff who would be a good fit there (ie. "List-y").
+        Apparently, one of the questions they ask at interviews is which event you last attended.
         </p>
       </div>
     </div>
       <div class="row">
         <div class="col-sm-7">
-          <p>
-          Our homework on <strong>Friday</strong> was to research and choose and API, and then create a webpage
-          which connects to that API. I had a quick look over a list of free APIs, before heading out to the
-          main area to attend a talk from <a href="https://www.list.co.uk/" target="_blank">The List</a>. They
-          essentially provide a "list" of events taking place mainly in Edinburgh and Glasgow, but have
-          expanded out across the UK in recent times. The gentleman presenting (I didn't catch his name) was
-          one of the original founders of The List in 1985, and I was very impressed by his passion and
-          enthusiasm. There was more to it than simply listing events too. For example, the police and
-          transport services subscribe to them to receive information about which events are taking place, and
-          the numbers expected to attend. Hotels are also interested, to manage yield. That probably explains
-          why hotel prices shoot up whenever something is happening in that area on a particular date.<br>
-          He mentioned that they're looking for staff who would be a good fit there ("List-y"). Apparently one
-          of the questions they ask at interviews is which event you last attended.
-          </p>
         <p>
         After lunch, we had a Q&A session with one of Codeclan's senior developers. It was intended to give
-        us industry insights, and careers advice. He was really friendly, and the whole thing was very
-        informal. I was surprised to hear that we should apply for all jobs, regardless of the languages used
-        within that company. During this course, we focus on Ruby, Java and Javascript, but we only spend a
-        few weeks on each. I guess it follows that we have the potential to pick up another language fairly
-        quickly. C# was mentioned, which is a language used in Windows environments. I have some experience
-        with C#, so I may revisit it at the end of the course, depending on how things are going. There was
-        also the inevitable discussion around salaries, which I'm never comfortable with. I don't think any
-        of us should be focussing on that at this stage, but at the same time, there is no avoiding it.
+        us industry insights, as well as careers advice. He was really friendly, and the whole thing was
+        very informal. I was surprised to hear that we should apply for <em>all</em> jobs, regardless of
+        the languages used within that company. During this course, we focus on Ruby, Java and Javascript,
+        but we only spend a few weeks on each. I guess it follows that we have the potential to pick up
+        another language fairly quickly. C# was mentioned, which is a language used in Windows environments.
+        I have some experience with C#, so I may revisit it at the end of the course; depending on how things
+        are going of course. There was also the inevitable discussion about salaries, which I'm never
+        completely comfortable with. I don't think any of us should be focussing on that at this stage, but
+        at the same time; there is no avoiding it.
+        </p>
+        <p>
+        Back to the homework - I settled on a <a href="http://numbersapi.com/" target="_blank">Numbers API</a>.
+        My reasoning was that there are a lot of things you can do with numbers, and they can be manipulated
+        within your code. When you pass the API a number, it returns a fact associated with that number. You
+        can also pass it a date, year, or ask it to pick a random number. It was all straightforward enough
+        to link it to a webpage - apart from the date. You provide it a date in the format day/month, but it
+        returns it in the format of day of the year. For example, 28/2 would be returned as 59. I had to
+        write some code to convert it back to day/month again, in order to display that on the page. <br>
+        Anyway, if you'd like to have a look, it's <a href="./numbers.html" target="_blank">here</a>. See if
+        you can spot the bug which occurs when you use months with less than 31 days...
         </p>
       </div>
         <div class="col-sm-5">
@@ -936,19 +954,8 @@ wrap for <strong>week 3</strong>!
       <div class="row">
         <div class="col-xs-12">
         <p>
-        Back to the homework - I settled on a <a href="http://numbersapi.com/" target="_blank">Numbers API</a>.
-        My reasoning was that there are a lot of things you can do with numbers, and they can be manipulated
-        within your code. When you pass the API a number, it returns a fact associated with that number. You
-        can also pass it a date, year, or ask it to pick a random number. It was all straightforward enough
-        to link it to a webpage - apart from the date. You provide it a date in the format day/month, but it
-        returns it in the format of day of the year. For example, 28/2 would be returned as 59. I had to
-        write some code to convert it back to day/month again, in order to display that on the page. <br>
-        Anyway, if you'd like to have a look, it's <a href="/numbers.html" target="_blank">here</a>. See if
-        you can spot the bug which occurs in months with less than 31 days...
-        </p>
-        <p>
         Onwards to week 8 then - nearing the halfway point! I believe we're going to look at Javascript
-        databases, to make our apps full stack.
+        databases, in order to make our apps "full stack".
         </p>
 </div>
 </div>
