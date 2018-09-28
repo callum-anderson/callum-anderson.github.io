@@ -28,13 +28,12 @@
         <div class="col-xs-4 dropdown">
 <button onclick="blogDropDown()" class="dropbtn">Blog</button>
 <div id="myDropdown" class="dropdown-content">
-  <a href="./blog.html#week1">Week 1</a>
-  <a href="./blog.html#week2">Week 2</a>
-  <a href="./blog.html#week3">Week 3</a>
-  <a href="./blog.html#week4">Week 4</a>
-  <a href="./blog.html#week5">Week 5</a>
-  <a href="./blog.html#week6">Week 6</a>
+  <a href="./blog.html#week1">Week 1-2</a>
+  <a href="./blog.html#week3">Week 3-4</a>
+  <a href="./blog.html#week5">Week 5-6</a>
   <a href="./blog.html#week7">Week 7</a>
+  <a href="./blog.html#week8">Week 8</a>
+  <a href="./blog.html#week9">Week 9</a>
 </div>
 </div>
         <div class="col-xs-3">
@@ -905,7 +904,7 @@ wrap for <strong>week 3</strong>!
         Our homework issued on <strong>Friday</strong> morning involved researching and choosing an API,
         and then creating a webpage which connects to that API. I had a quick look over a list of free
         APIs, before heading out to the main area to attend a talk from
-        <a href="https://www.list.co.uk/" target="_blank">The List</a>. If you're no familiar, they
+        <a href="https://www.list.co.uk/" target="_blank">The List</a>. If you're not  familiar, they
         essentially provide a "list" of events taking place in Edinburgh and Glasgow mainly, but have
         expanded out across the UK in recent times. The gentleman presenting (I didn't catch his name) was
         one of the original founders in 1985, and I was very impressed by his passion and enthusiasm.
@@ -961,29 +960,298 @@ wrap for <strong>week 3</strong>!
 </div>
 </div>
 </div>
-<!--
+
 <a id="week8">&nbsp;</a>
-  <h4 class="blog-post">Week 8 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
+  <h4 class="blog-post">Week 8 <em>- posted 27/09/18</em><span class="collapser">-</span></h4>
 <div id="w8" class="blog-panel">
 <div class="row">
       <div class="col-xs-12">
-  <p>
-  </p>
+      <p>
+      Week 8, and I should start by saying it's
+      been such a busy week! As mentioned previously, we started on <strong>Monday</strong> by looking at
+      "back-end" Javascript functionality. In other words - the database and associated components that
+      allow the app to save and load data. Everything we've done so far with Javascript exists in the
+      browser only. If you refresh or close the page - everything is wiped and reset.
+      </p>
+      <p>
+      We began the day with an introduction to <a href="http://expressjs.com/" target="_blank">Express</a>.
+      This is a Javascript web app framework, which, in a nutshell, enables us to easily connect the
+      front-end (everything in the browser) and the back-end (database - more on that shortly!).<br>
+      Express allows you to "listen" for requests on your server. This is what happens on <em>all</em> web
+      servers - they are in a permanent state of listening for requests from clients (ie. users navigating
+      to a webpage in the browser). This wasn't too taxing, so we quickly moved on to the database lesson.
+      We'd be using <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>, which - I'm reliably
+      informed - stands for "humongous database". The biggest difference between this and SQL-based
+      databases is that this one isn't relational. Everything in it is stored as a key-value pair, such
+      as "name: Deborah" or "colour: red" etc. I'm over-simplifying it of course, but that's the principle
+      behind it.<br>
+      I should add that when I mention running a database and server - it's all running on the same
+      computer in this case. You just configure your browser to point to it locally. This is for learning
+      purposes only - it wouldn't make much sense to do that in a real-world scenario!
+      </p>
+      <p>
+      The homework for the night was to review a sample codebase for an app, which uses Express and
+      MongoDB to connect a front-end webpage. A lot of it was new and quite daunting. I had to do a
+      bit of research to try to figure out what some of the code was doing.
+      </p>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+      We started on <strong>Tuesday</strong> with a review of the homework after standup, and I was
+      relieved to discover I wasn't the only one who didn't understand all of it. We then revisited the concept
+      of Restful routes, which is a convention used to organise server requests according to their purpose.
+      Most requests are known as GET requests, which "get" information back from a webpage. Then there are
+      POST requests, most often used when submitting a form on a webpage. There are also PUT (update)
+      requests, which are used when an existing item on a webpage is edited and submitted. And then there
+      are DELETE requests, which are self-explanatory!
+      </p>
+      <p>
+      We had a paired lab in the afternoon which again involved taking an existing codebase; only this
+      time it wasn't fully functional. We were to review the code and make the necessary changes to get
+      the app working. The app was a webpage which allowed birdwatchers to create, edit and delete
+      "sightings". We managed to sort the code out, but although we checked it and double checked it; the
+      app still didn't work. I later found out that it was because we opened the webpage directly from the
+      file on the computer; rather than requesting it from the server running on the computer. These
+      mistakes are infuriating at the time, but I guess they're all part of the learning.
+      </p>
+      <p>
+      We didn't have any homework that night, but I decided to tinker with the birdwatcher app to get it
+      working properly. I knew it would annoy me if I didn't see it through.
+      </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/codeclan_foyer.jpg" width="400px" height="489px" alt="Photo of Codeclan foyer with table tennis table"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p>
+      On <strong>Wednesday</strong>, we had another lab. This one would last all day, and again it was a
+      paired lab. The task was to build a full-stack app from scratch - front-end and back-end. This was a
+      big ask, and the difficulty depended on whether you challenged yourselves to do it from memory or
+      refer to notes. Well, it was impossible to do it <em>all</em> from memory, but we decided to refer to
+      notes only when we got stuck. Which was quite often, as it turned out!<br>
+      The objective was to build a "Bucket List" app. It should allow you to create or delete bucket list
+      items, and mark them as complete if they'd been done. We decided to go a step further, and allow the
+      details of the bucket list item to be updated too. This proved to be a very difficult thing to
+      achieve, as it involved making each item a form rather than just a read-only section. We didn't quite
+      get it finished within class time, and my lab partner persuaded me to hang back afterwards to finish it.
+      I was quite anxious to get home because there was a heavy storm outside. Roads were being closed
+      and trains cancelled. I found out later that an entire
+      <a href="https://www.edinburghnews.scotsman.com/our-region/edinburgh/storm-ali-a-recap-of-the-damage-and-disruption-in-edinburgh-and-the-lothians-1-4802970" target="_blank">windscreen blew off the front of a bus</a>
+      too! However, the draw of finishing the app proved too much; so I stayed behind and we managed to
+      finish it.
+      </p>
+      <p>
+        By <strong>Thursday</strong>, there was an air of anxiety, excitement and anticipation setting in
+        ahead of project week. I must say I was surprised when other members of my cohort told me that they
+        were getting nervous, I couldn't really understand that. There is no "pressure", as such, and no minimum
+        standard or benchmark - you just do the best you can. I don't know if they were perhaps considering that
+        the project may be part of their final portfolio.
+      </p>
+      <p>
+        On Thursday morning, we re-visited Git and advanced Git commands. We've been using Git since day 1 as
+        a version control system, and our daily homework is pushed up to Github so that the instructors can
+        review it there. However, we are going to be working in groups over the coming week, so we'd need to
+        learn how to use Git collaboratively. We have to avoid overwriting changes made to the project by our
+        team members, and we have to keep a stable version of the project which we can revert back to if it all
+        goes wrong!
+      </p>
+      <p>
+        Following the Git lesson, we were ceremonially sorted into our groups. We were asked to stand at the
+        back of the classroom, and the instructors marked 5 tables for the groups. Our names were read out one
+        at a time, along with which group we were to go to. There are 18 students in our class, so we ended up
+        with groups of 3 or 4. I was in a group of 4, which might sound like an advantage but I'm not sure
+        that it necessarily is! It would require a larger degree of coordination and communication, as we were to
+        discover very soon...
+      </p>
+      <p>
+        The project briefs were announced next. We were to choose one as a team, although we could deviate from it
+        slightly if approved by an instructor. The available briefs were:
+      </p>
+      <ul>
+        <li><strong>Education app</strong> - an interactive web app which displays information about a topic</li>
+        <li><strong>CO2 Calculator app</strong> - an interactive app which generates a carbon footprint score</li>
+        <li><strong>Browser game</strong> - an interactive game based on a traditional board or table game</li>
+        <li><strong>Stocks/shares app</strong> - an interactive app which shows stock or share values</li>
+      </ul>
+      <p>
+        After lunch, we got together as a group to decide what we were going to do and how we were going to achieve
+        it. I was open to any of the briefs really, but probably a little more keen on the game or CO2 calculator.
+        They were a little different from any of the previous labs we'd worked on. My teammates were in agreement,
+        and we voted unanimously to take on the browser game. One of the teams in the previous cohort (E22) had
+        attempted a version of Scrabble, and we all agreed that it was impressive!
+      </p>
+      <p>
+        Then we had to decide on which game to code. I suggested Play Your Cards Right (based on the TV show),
+        and my teammates suggested Minesweeper, Snakes and Ladders, and Trivial Pursuit. We settled on Trivial Pursuit,
+        largely because we knew of a
+        <a href="https://opentdb.com/api.php?amount=20&category=" target="_blank">quiz questions API</a>
+        which could provide the questions for us. The challenging part would be to create an interactive board,
+        and then integrate that with the quiz questions and overall game flow.
+      </p>
+      <p>
+        At this stage, we needed a proof of concept so that we knew we would be able to achieve it. If we were
+        biting off more than we could chew, we had to know before the weekend so that we could switch to something
+        else. With that in mind, I went home and spent the evening working on the board logic. Without it, the
+        game was literally a bust!
+      </p>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+        I arrived on <strong>Friday</strong> morning bearing good news - we had a board prototype. We'd agreed
+        that the MVP (Minimum Viable Product) should be a one-way track around a board, with questions of
+        different categories on each square. I created the track using a layout method called CSS grid,
+        and used Javascript to manipulate the position of the "board piece" around it. If you want to see
+        it, it's <a href="./css_board_test/css_board_test.html" target="_blank">here</a> - although there
+        isn't much to it.<br>
+        Secretly, I would have been disappointed if we didn't achieve a more complex board layout.
+      </p>
+      <p>
+        We spent the rest of the day thrashing out plans on paper and
+        <a href="https://trello.com" target="_blank">Trello</a>, which is an online tool to help organise
+        your workload and tasks. It allows your whole team to log in individually, to create, edit or
+        delete tasks.
+      </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/trello_board.png" width="500px" height="288px" alt="Screenshot of Trello MosCow board"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p>We decided to meet again on <strong>Sunday</strong> at a local coffee shop, as the Codeclan building
+        is usually closed on Sundays. We hit our first snag at that point. When we parted on Friday, we
+        hadn't been clear enough about which tasks we were all picking up over the weekend. This led to
+        both myself and one of my teammates working on the board, which was time wasted. Never mind! Time
+        was still on our side....
+      </p>
 </div>
 </div>
 </div>
 
+
 <a id="week9">&nbsp;</a>
-  <h4 class="blog-post">Week 9 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
+  <h4 class="blog-post">Week 9 <em>- posted 28/09/18</em><span class="collapser">-</span></h4>
 <div id="w9" class="blog-panel">
 <div class="row">
       <div class="col-xs-12">
   <p>
+    It didn't feel like a new week on <strong>Monday</strong>, as we'd all been working through the weekend and it
+      was a continuation of the previous week. By this point, we had a working board which a single board piece
+      could move around (clockwise only), and a question set of 6 different categories - books, history, music etc.
+      We also had a graphic of a "pie", which is a circle with 6 triangles inside it. The intention was to use this
+      as a representation of the player's score. The game will be won when a player has 6 pieces of pie.
+  </p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+  <p>
+    We had our MVP completed mid-afternoon. This was a one-way board, with different categories on each square. When the
+    piece lands on a square, a quiz question is loaded. If answered wrongly, the play switches to the other player.
+    There is no way to win the game at this point! We decided that it won't be necessary for the MVP.
+  </p>
+  <p>
+    As mentioned previously, I was really keen to have a non-linear board, so I took that task on on Monday
+    evening. We'd talked about having a circular board too, as in the traditional game; but decided against it
+    at this point because it wasn't a realistic goal given the timeframe. The non-linear board was an outside
+    track with a "cross" in the middle to allow players to cut across the board.
+  </p>
+</div>
+  <div class="col-sm-5">
+  <img class="img-responsive blog-img" src="./thumbs/pie_in_the_sky.jpg" width="400px" height="309px" alt="Rough planning sketches on paper"/>
+  <div id="img-modal">
+    <span class="img-modal-close">&times;</span>
+    <img class="img-modal-content img-responsive"/>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  <p>
+    I attempted to work this out programmatically, but I couldn't find a reliable and suitable algorithm to do it.
+    I decided instead to map the board out, with each square assigned coordinates. These coordinates could
+    then be used by the board piece to set the position. I also wanted to give the player the available
+    board "move options" after rolling the die. I achieved this by mapping routes to each square, for a given
+    number between 1 and 6. This was a very laborious and painstaking task. There are 33 squares, with 6 sets
+    of routes to define for each one. Once it was done, doors would be opened to further functionality. The
+    knowledge of this spurred me on!
+  </p>
+  <p>
+    We were well placed by <strong>Tuesday</strong>, with a semi-working game in the bag. It had to be finished
+    by Thursday though, so I was conscious of time. We had to figure out how to make it multiplayer
+    (2/3/4 players), and we still didn't have any way for a player to actually win. We also wanted to add a
+    timer in, so that one player couldn't stay at the board indefinitely if they kept answering the questions
+    correctly. If truth be told, I was against this idea! It happens in other games such as snooker; if a
+    player is good enough to stay at the table and clear up. I relented to the will of my team though.
+  </p>
+  <p>
+    I spent Tuesday evening working on the addition of 3 and 4 player functionality. This was quite
+    challenging. Up to now, the game logic worked by assuming that if player 1 isn't at the board, then player 2
+    is. It now had to be re-written to cycle through the players. I also had to put a block on someone entering
+    player 1, 2 and 4 at the start screen. I'm not sure why they would, but if they did it would break it!
+  </p>
+  <p>
+    I managed to get that done by <strong>Wednesday</strong>, and my teammates had added the timer as well as
+    jazzing up the look of the game. I'd also added an instructions/"how to play" dropdown to the game, which
+    could be toggled open or closed by clicking on a button. When I showed it to the rest of the team, they  voted
+    against that being available "in-play"; so I moved it to the start screen. One of my teammates had also
+    added some cool fade-out and fade-in effects to the start screen and end screen, and a database connection
+    was made later in the afternoon to include a highscores/leaderboard table on the end screen.<br>
+    And that was it! We were all quite pleased with the final result.
+  </p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+  <p>
+    Unfortunately, I would miss the presentations on <strong>Thursday</strong> as I'd planned a trip down
+    south to visit friends and family over the weekend. I'd have liked to have seen some of the other teams'
+    apps, as well as co-presenting our app of course. The presentations take place in the main area rather
+    than in our classroom, so that anyone can watch them. Our cohort (E24) were presenting in the morning,
+    and the previous cohort (E23) were to present in the afternoon. This was the first time that two cohorts
+    were on the same module (Javascript) at the same time. E23 were a few weeks ahead of us, having done the
+    Java module, which is why they were to present after us I believe.
+  </p>
+</div>
+  <div class="col-sm-5">
+  <img class="img-responsive blog-img" src="./thumbs/duck_mascots.jpg" width="400px" height="276px" alt="Photo of knitted duck mascots"/>
+  <div id="img-modal">
+    <span class="img-modal-close">&times;</span>
+    <img class="img-modal-content img-responsive"/>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  <p>
+    My teammates decided to prank me by telling me that the presentation was a disaster as the quiz
+    questions API went down. This would break the game, and I fell for it because it had gone down once
+    or twice while we were developing the app. In fact, we'd discussed making an offline backup version,
+    but didn't have time to implement it.<br>
+    They eventually put me out of my misery - the presentation was a success!
+  </p>
+  <p>
+    If you'd like to take a look, the final version (minus database) is
+    <a href="./pie_in_the_sky/pie_in_the_sky.html" target="_blank">here</a>.
   </p>
 </div>
 </div>
 </div>
-
+<!--
 <a id="week10">&nbsp;</a>
   <h4 class="blog-post">Week 10 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
 <div id="w10" class="blog-panel">
