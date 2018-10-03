@@ -1,0 +1,250 @@
+body {
+  background-color: #E5F6F9;
+}
+
+#start-screen {
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(197, 192, 229, 0.95);
+  width: 96%;
+  height: 96%;
+  color: #68534B;
+  font-family: 'Black Ops One', cursive;
+  box-shadow: 0 0px 100px grey, 0 0px 100px rgba(0, 0, 0, .1);
+  border-radius: 2%;
+  margin: 2%;
+}
+
+#start-screen.end {
+  transition: all 1s ease-in-out;
+  visibility: hidden;
+  z-index: 0;
+  position: fixed;
+  margin: 1% auto;
+  background-color: rgba(197, 192, 229, 0.0);
+  width: 80%;
+  height: 60%;
+  color: rgba(104, 83, 75, 0.0);
+  box-shadow: none;
+  opacity: 0;
+  border-radius: 2%;
+}
+
+#start-screen h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 0.2em;
+}
+
+#start-screen-form {
+  font-family: 'Graduate', cursive;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  margin: 10% auto;
+  width: 90%;
+}
+#start-screen-form input, #start-screen-form label {
+  font-size: 1em;
+  margin: .5em;
+}
+#start-screen-form input[type="submit"] {
+  cursor: pointer;
+  grid-column-start: 2;
+}
+#start-screen-form select {
+  position: relative;
+  top: 8px;
+}
+
+#form-error {
+  color: red;
+  text-align: center;
+}
+#instructions {
+  margin-left: 4%;
+  font-family: 'Titillium Web', sans-serif;
+  grid-column: 1 / span 2;
+  font-size: 0.9em;
+}
+#instructions-drop-btn {
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+#instructions-drop-btn:after {
+  content: "\25BE";
+  position: relative;
+  left: 10px;
+}
+#instructions-dropdown {
+  margin-left: 4%;
+  margin-right: 4%;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.5em;
+  max-height: 40vh;
+  overflow: scroll;
+}
+.hidden {
+  display: none;
+}
+
+#end-screen {
+  font-size: 5em;
+  display: none;
+  position: fixed;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+  z-index: 2;
+  background-color: rgba(197, 192, 229, 0.95);
+  width: 80%;
+  height: 80%;
+  color: #68534B;
+  font-family: 'Black Ops One', cursive;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0 0px 100px grey, 0 0px 100px rgba(0, 0, 0, .1);
+  -webkit-animation: fadein 1s;
+  border-radius: 2%;
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+#end-screen button {
+  font-family: 'Graduate', cursive;
+  padding: 1em;
+  font-size: 0.3em;
+  border-radius: 2%;
+  text-decoration: none;
+}
+
+.wrapper {
+  font-family: 'Graduate', cursive;
+  width: 90%;
+  height: 90%;
+  margin: 2% 5% 0;
+}
+.wrapper > div {
+  margin: 1em auto;
+}
+
+.wrapper #player-view-container h3 {
+  margin: 1em auto;
+  display: inline-block;
+}
+.wrapper #player-view-container button {
+  display: inline-block;
+  vertical-align: 100%;
+}
+.wrapper #question-card {
+  font-family: 'Graduate', cursive;
+}
+#categoryLegend {
+  display: flex;
+  flex-wrap: wrap;
+}
+#categoryLegend h3 {
+  flex: 100%;
+  margin: 3% auto;
+}
+#categoryLegend div {
+  padding: 3px;
+  font-size: 0.8em;
+  flex: 1 1 30%;
+}
+#game-view-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+}
+#player1-score-display, #player2-score-display,
+ #player3-score-display, #player4-score-display {
+   flex: 1 1 25%;
+   margin: 1% auto;
+   font-size: 0.8em;
+ }
+
+#game-view-container .blinkPlayer {
+  -webkit-animation: 1s blink step-end infinite;
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: #F96377;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.wrapper #question-card ul {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+
+@media all and (min-width: 600px) {
+
+  #start-screen h1 {
+    font-size: 4em;
+  }
+  #start-screen-form {
+    font-family: 'Graduate', cursive;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr;
+    width: 50%;
+  }
+  .wrapper {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-areas: "game game game"
+    "legend board player"
+    "card card card";
+    grid-template-rows: 0.1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .wrapper #game-view-container {
+    grid-area: game;
+    width: 80%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+  }
+  #player1-score-display, #player2-score-display,
+   #player3-score-display, #player4-score-display {
+     flex: 1 1 20%;
+     font-size: 1.2em;
+   }
+  .wrapper #categoryLegend {
+    grid-area: legend;
+    display: inline-block;
+    padding: 1em;
+  }
+
+  .wrapper #board-container {
+    grid-area: board;
+  }
+
+  .wrapper #player-view-container {
+    grid-area: player;
+    text-align: center;
+    padding: 1em;
+  }
+
+  .wrapper #player-view-container button {
+    display: block;
+    margin: 0 auto;
+  }
+  .wrapper #question-card {
+    grid-area: card;
+    margin-left: 1em;
+  }
+
+}
