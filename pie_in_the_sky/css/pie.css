@@ -3,33 +3,36 @@
   background: rgb(29, 39, 57);
   background: black;
   border-radius: 50%;
-  /* bottom: 26px; */
   box-shadow: 0 1px 2px gray, 0 2px 2px rgba(0, 0, 0, .2);
   height: auto;
-  left: 26px;
   pointer-events: none;
   display: inline-block;
   position: relative;
   width: auto;
+  margin: 0 0.2em;
 }
 
 .scaler {
   -webkit-transform: scale(0.25);
   -webkit-transform-origin: 0 0;
-  height: 50px;
+  height: 6vw;
+  width: 6vw;
+  min-height: 10px;
   margin: 3px;
-  width: 50px;
+  min-width: 10px;
 }
 
 .segments {
+  min-height: 40px;
+  min-width: 40px;
+  height: 24vw;
+  width: 24vw;
   border-radius: 50%;
-  height: 200px;
   list-style: none;
   margin: 0;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 200px;
 }
 
 .segment {
@@ -67,4 +70,15 @@
 /* books */
   .segments > :nth-child(6) {
   background-color: #F96377;
+}
+
+@media only screen and (min-width: 769px) {
+  .segments {
+    height: 12vw;
+    width: 12vw;
+  }
+  .scaler {
+    height: 3vw;
+    width: 3vw;
+  }
 }

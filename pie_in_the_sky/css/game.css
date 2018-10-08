@@ -5,16 +5,14 @@ body {
 #start-screen {
   position: fixed;
   z-index: 2;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 1%;
   background-color: rgba(197, 192, 229, 0.95);
-  width: 80%;
-  height: 90%;
+  width: 95vw;
+  height: 90vh;
   color: #68534B;
   font-family: 'Black Ops One', cursive;
   box-shadow: 0 0px 100px grey, 0 0px 100px rgba(0, 0, 0, .1);
   border-radius: 2%;
+  margin: 2%;
 }
 
 #start-screen.end {
@@ -22,12 +20,7 @@ body {
   visibility: hidden;
   z-index: 0;
   position: fixed;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 7%;
   background-color: rgba(197, 192, 229, 0.0);
-  width: 80%;
-  height: 60%;
   color: rgba(104, 83, 75, 0.0);
   box-shadow: none;
   opacity: 0;
@@ -36,31 +29,25 @@ body {
 
 #start-screen h1 {
   text-align: center;
-  font-size: 5em;
+  font-size: 2em;
   margin-top: 0.2em;
-  /* -webkit-text-stroke: 2px black; */
 }
 
 #start-screen-form {
   font-family: 'Graduate', cursive;
-  align: vertical;
   display: grid;
-  grid-template-columns: 2fr 1.5fr;
-  grid-template-rows: 0.3fr 0.3fr 0.3fr;
-  width: 50%;
-  margin: 2% auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  margin: 10% auto;
+  width: 90%;
 }
 #start-screen-form input, #start-screen-form label {
-  font-size: 1em;
+  width: 90%;
   margin: .5em;
 }
 #start-screen-form input[type="submit"] {
   cursor: pointer;
   grid-column-start: 2;
-}
-#start-screen-form select {
-  position: relative;
-  top: 8px;
 }
 
 #form-error {
@@ -72,9 +59,11 @@ body {
   font-family: 'Titillium Web', sans-serif;
   grid-column: 1 / span 2;
   font-size: 0.9em;
+  overflow: scroll;
+  max-height: 20vh;
 }
 #instructions-drop-btn {
-  margin-bottom: 0.5em;
+  margin: 0.8em 2em;
   cursor: pointer;
 }
 #instructions-drop-btn:after {
@@ -87,26 +76,22 @@ body {
   margin-right: 4%;
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.5em;
-  /* width: 60vw; */
-  /* z-index: 2; */
-  /* overflow: scroll; */
-  /* max-height: 170px; */
+  max-height: 40vh;
+  overflow: scroll;
 }
 .hidden {
   display: none;
 }
 
 #end-screen {
-  font-size: 5em;
+  font-size: 1.5em;
   display: none;
   position: fixed;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 3%;
+  margin: 2%;
   z-index: 2;
   background-color: rgba(197, 192, 229, 0.95);
-  width: 80%;
-  height: 80%;
+  width: 95vw;
+  height: 90vh;
   color: #68534B;
   font-family: 'Black Ops One', cursive;
   align-items: center;
@@ -132,46 +117,53 @@ body {
 
 .wrapper {
   font-family: 'Graduate', cursive;
-  display: grid;
-  width: 80%;
-  height: 80%;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  grid-template-areas: "game game game"
-  "legend board player"
-  "legend board card";
-  grid-template-rows: .8fr 2fr 3fr;
-  grid-template-columns: 0.3fr 2fr 1fr;
+  width: 90%;
+  height: 90%;
+  margin: 2% 5% 0;
+}
+.wrapper > div {
+  margin: 1em auto;
 }
 
-#player1-score-display {
-  font-size: 1.2em;
+.wrapper #player-view-container h3 {
+  margin: 1em auto;
   display: inline-block;
-  vertical-align: middle;
-  mark: white;
 }
 
-#player2-score-display {
-  font-size: 1.2em;
-  display: inline-block;
-  vertical-align: middle;
-  mark: black;
+.wrapper #question-card {
+  font-family: 'Graduate', cursive;
 }
-
-#player3-score-display {
-  font-size: 1.2em;
-  display: inline-block;
-  vertical-align: middle;
-  mark: black;
+#die-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-
-#player4-score-display {
-  font-size: 1.2em;
-  display: inline-block;
-  vertical-align: middle;
-  mark: black;
+#categoryLegend {
+  display: flex;
+  flex-wrap: wrap;
 }
+#categoryLegend h3 {
+  flex: 100%;
+  margin: 3% auto;
+}
+#categoryLegend div {
+  padding: 3px;
+  font-size: 0.8em;
+  flex: 1 1 30%;
+}
+#game-view-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+}
+#player1-score-display, #player2-score-display,
+ #player3-score-display, #player4-score-display {
+   flex: 1 1 25%;
+   margin: 1% auto;
+   font-size: 0.8em;
+ }
 
 #game-view-container .blinkPlayer {
   -webkit-animation: 1s blink step-end infinite;
@@ -186,46 +178,76 @@ body {
   }
 }
 
-.wrapper #game-view-container {
-  grid-area: game;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 0.5em;
-}
-.wrapper #categoryLegend {
-  grid-area: legend;
-  width: 85px;
-  height: 35px;
-}
-
-.wrapper #board-container {
-  grid-area: board;
-}
-
-.wrapper #player-view-container {
-  grid-area: player;
-  /* margin-top: 2em; */
-  text-align: center;
-  /* line-height: 1.5em; */
-}
-
-.wrapper #player-view-container h3 {
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-.wrapper #player-view-container button {
-  display: block;
-  margin: 0 auto;
-}
-
-.wrapper #question-card {
-  grid-area: card;
-  margin-left: 1em;
-  font-family: 'Graduate', cursive;
-  line-height: 1.5em;
-}
-
 .wrapper #question-card ul {
   list-style-type: none;
   margin: 10px 0;
+}
+
+
+@media only screen and (min-width: 769px) {
+
+  #start-screen h1 {
+    font-size: 4em;
+  }
+
+  #start-screen-form {
+    font-family: 'Graduate', cursive;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr;
+    width: 80%;
+  }
+
+  #end-screen {
+    font-size: 3em;
+  }
+  .wrapper {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-areas: "game game game"
+    "legend board player"
+    "card card card";
+    grid-template-rows: 0.1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .wrapper #game-view-container {
+    grid-area: game;
+    width: 80%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+  }
+  #player1-score-display, #player2-score-display,
+   #player3-score-display, #player4-score-display {
+     flex: 1 1 20%;
+     font-size: 1.2em;
+   }
+  .wrapper #categoryLegend {
+    grid-area: legend;
+    display: inline-block;
+    padding: 1em;
+  }
+
+  .wrapper #board-container {
+    grid-area: board;
+  }
+
+  .wrapper #player-view-container {
+    display: inline-block;
+    grid-area: player;
+    text-align: center;
+    padding: 1em;
+  }
+
+  #player-view-container button, #player-view-container div {
+    display: block;
+    margin: 1em auto;
+  }
+  .wrapper #question-card {
+    grid-area: card;
+    margin-left: 1em;
+  }
+
 }
