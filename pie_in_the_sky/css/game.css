@@ -59,9 +59,6 @@ body {
   font-family: 'Titillium Web', sans-serif;
   grid-column: 1 / span 2;
   font-size: 0.9em;
-  overflow: scroll;
-  width: 80%;
-  max-height: 20vh;
 }
 #instructions-drop-btn {
   margin: 0.8em 2em;
@@ -77,7 +74,7 @@ body {
   margin-right: 4%;
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.5em;
-  max-height: 40vh;
+  max-height: 20vh;
   overflow: scroll;
 }
 .hidden {
@@ -197,6 +194,7 @@ body {
     grid-template-columns: 2fr 1.5fr;
     grid-template-rows: 0.3fr 0.3fr 0.3fr;
     width: 80%;
+    margin: 2% auto;
   }
 
   #end-screen {
