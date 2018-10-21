@@ -63,7 +63,7 @@ img {
   margin: 5% auto;
 }
 .blog-panel {
-  max-height: 8500px;
+  max-height: 10000px;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
   -webkit-transition: max-height 0.5s ease-out;
