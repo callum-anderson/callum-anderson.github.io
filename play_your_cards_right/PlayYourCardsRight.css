@@ -1,0 +1,335 @@
+html, body {
+  width: 100%;
+  padding: 0;
+}
+body {
+  background-color: purple;
+  margin: 0 auto;
+  font-family: Verdana, sans-serif;
+}
+#header {
+  padding: 1em;
+  min-height: 100px;
+  font-family: "Segoe Script", "Script", "Georgia", serif;
+}
+#header > h1 {
+  background: radial-gradient(white, white, lavender);
+  border : 2px solid white;
+  font-size: 1em;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5em 0;
+  border-radius: 5px;
+}
+#header > h1::before {
+  content: "\2665 \2660";
+  margin-right: 1em;
+}
+#header > h1::after {
+  content: "\2666 \2663";
+  margin-left: 1em;
+}
+#menu {
+  margin: 1.5em auto;
+  width: 90%;
+}
+#menu ul, #button-controls {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 0.8em;
+  margin: auto;
+  width: 95%;
+  padding: 0;
+}
+#menu li, #button-controls li {
+  padding: 0.3em 0.7em;
+  text-align: center;
+  list-style-type: none;
+  background-color: lavender;
+  border : 2px solid white;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 2px 1px 2px lightgray;
+  cursor: pointer;
+}
+#about, #instructions {
+  width: 95%;
+  border: 3px solid red;
+  border-radius: 10px;
+  margin: 10% auto;
+  display: block;
+  background: repeating-linear-gradient(45deg,lightcoral,lightcoral 30px,crimson 30px,crimson 60px);
+}
+#about p, #instructions p {
+  position: absolute;
+  width: 80%;
+  background-color: white;
+  font-size: 1.4em;
+  border-radius: 10px;
+  border: 3px solid red;
+  left: 50%;
+  top: 50%;
+  padding: 10px;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.about-instructions-modal {
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 10%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.show-rules-about {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+.close-button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 3em;
+  font-weight: bold;
+}
+.close-button:hover {
+  cursor: pointer;
+  color: white;
+}
+#menu li:hover, #button-controls li:hover {
+  background: radial-gradient(white, white, lavender);
+  color: indigo;
+}
+#container {
+  width: 95%;
+  margin: auto;
+  min-height: 600px;
+  text-align: center;
+}
+#game-area {
+  margin: 0 auto 1em;
+}
+#card-rack {
+  min-height: 100px;
+  margin: auto;
+  padding: 8px;;
+  text-shadow: none;
+}
+#button-controls li {
+  padding: 0.6em;
+  font-size: 0.8em;
+  margin: 0.5em auto;
+}
+#change-card::after {
+  content: "\27F3";
+}
+#higher-button::after {
+  content: "\21E7";
+}
+#lower-button::after {
+  content: "\21E9";
+}
+#change-card::after, #higher-button::after, #lower-button::after {
+  font-weight: bold;
+  margin-left: 0.4em;
+}
+.higher-lower-pressed {
+  color: red;
+}
+#game-output, #game-area {
+  background-color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  border-radius: 10px;
+  text-shadow: 0.5px 0.5px rgba(150,150,150,0.7);
+  box-shadow: 2px 1px 2px lightgray;
+}
+#game-output {
+  margin: 1em auto;
+  text-shadow: none;
+  font-size: 0.7em;
+  padding: 5px;
+}
+#card-changes-output, #score-output {
+  display: inline-block;
+  width: 45%;
+  margin: 0.5em auto 0;
+  padding: 0.5em 0;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+#score-span, #changes-span {
+  font-size: 1.4em;
+}
+#game-info {
+  margin: 0.5em auto 0;
+  min-height: 20px;
+  display: block;
+  width: 95%;
+  padding: 0.4em;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid white;
+}
+#question-output li:hover {
+  background-color: snow;
+  cursor: pointer;
+}
+#question-output li {
+  list-style-type: none;
+  margin: 0.5em auto;
+  background-color: lavender;
+  padding: 0.2em;
+  border-radius: 5px;
+}
+#question-output ul {
+  width: 90%;
+}
+#question-output {
+  border-radius: 5px;
+  background-color: white;
+  margin: 0.5em;
+}
+#question-output p, #question-output ul {
+  padding: 0.5em;
+  margin: 0 auto;
+}
+.red {
+  color: red;
+}
+
+
+     /* start of tablet devices */
+@media screen and (min-width: 768px) {
+  #header {
+    height: auto;
+    padding: 1em;
+  }
+  #header > h1 {
+    width: 95%;
+    font-size: 2em;
+    padding: 0.5em 0;
+    border-radius: 10px;
+  }
+  #header > h1, #game-output, #game-area {
+    text-shadow: 1px 1px rgba(150,150,150,0.7);
+    box-shadow: 2px 1px 2px lightgray;
+  }
+  #menu {
+    margin: 1em auto;
+    width: 80%;
+  }
+  #menu ul, #button-controls ul {
+    width: 80%;
+    font-size: 1.8em;
+  }
+  #menu li {
+    margin: 0 1em;
+    padding: 0.4em 0.8em;
+    border-radius: 10px;
+  }
+  #about, #instructions {
+    width: 80%;
+  }
+  #about p, #instructions p {
+    font-size: 2.5em;
+    padding: 2%;
+  }
+  #button-controls {
+    margin: 1em auto;
+  }
+  #button-controls li {
+    font-size: 1.7em;
+    margin: 0 1em;
+    padding: 0.5em 0.8em;
+  }
+  #game-area, #game-output {
+    border: 3px solid lightgray;
+    width: 100%;
+    margin: 0 auto 1em;
+  }
+  #game-output ul {
+    width: 80%;
+  }
+  #game-output {
+    font-size: 1.45em;
+  }
+  #game-info {
+    min-height: 60px;
+  }
+  #game-info, #question-output li, #question-output,
+    #card-changes-output, #score-output {
+    border-radius: 10px;
+  }
+
+}
+
+     /* start of desktop devices */
+@media screen and (min-width: 1025px) {
+  #header {
+    font-size: 0.9em;
+    padding: 0.6em 0 0;
+  }
+  #header > h1 {
+    width: 80%;
+  }
+  #menu {
+    text-shadow: 1px 1px rgba(150,150,150,0.7);
+    margin: 1.5em auto;
+    width: 60%;
+    font-size: 0.7em;
+  }
+  #menu li {
+    border: 2px solid darkgray;
+    background-color: rgba(255,255,255,0.95);
+  }
+  #about, #instructions {
+    width: 50%;
+    margin: 0 auto;
+  }
+  #about p, #instructions p {
+    font-size: 2em;
+    padding: 2%;
+  }
+  #game-area, #game-output {
+    border: 3px solid lightgray;
+    width: 75%;
+    margin: 0.5em auto;
+  }
+  #card-rack {
+    padding: 0.6em;
+  }
+  #button-controls {
+    width: 70%;
+  }
+  #button-controls li {
+    font-size: 1.2em;
+    margin: 0 1em;
+    padding: 0.4em 0.8em;
+    border: 2px solid darkgray;
+  }
+  #game-output {
+    font-size: 1em;
+  }
+  #game-info {
+    min-height: 50px;
+    padding: 0.8em;
+  }
+  #game-output ul {
+    width: 60%;
+  }
+}
