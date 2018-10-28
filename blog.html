@@ -32,10 +32,10 @@
   <a href="./blog.html#week3">Week 3-4</a>
   <a href="./blog.html#week5">Week 5-6</a>
   <a href="./blog.html#week7">Week 7-8</a>
-  <a href="./blog.html#week9">Week 9</a>
-  <a href="./blog.html#week10">Week 10</a>
+  <a href="./blog.html#week9">Week 9-10</a>
   <a href="./blog.html#week11">Week 11</a>
   <a href="./blog.html#week12">Week 12</a>
+  <a href="./blog.html#week13">Week 13</a>
 </div>
 </div>
         <div class="col-xs-3">
@@ -1769,18 +1769,194 @@ wrap for <strong>week 3</strong>!
 </div>
 </div>
 
-<!--
+
 <a id="week13">&nbsp;</a>
-  <h4 class="blog-post">Week 13 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
+  <h4 class="blog-post">Week 13 <em>- posted 28/10/18</em><span class="collapser">-</span></h4>
 <div id="w13" class="blog-panel">
 <div class="row">
       <div class="col-xs-12">
-  <p>
-  </p>
+      <p>
+      Week 13 was to be a relatively tough week. The first two weeks of Java were fairly easy going, but we
+      were about to dive into a powerful toolkit called <a href="https://spring.io/" target="_blank">Spring</a>.
+      <strong>Monday</strong> started with an introduction to Spring and what it was about. It's actually
+      very difficult to describe what it does, because it does so much. It's like a massive toolkit, and
+      you pick small parts of it that you want to use. We would be combining it with another framework called
+      <a href="http://hibernate.org/" target="_blank">Hibernate</a>, which is used to connect to a database.
+      For the database, we'd be using PostgreSQL (ie. Postgres), which we'd used earlier in the course when we were working with Ruby.
+      </p>
+      <p>
+      What does all of this mean? Well, put simply, it allows us to easily connect our Java code to a
+      database; and output data to a webpage. It would also allow us to post data to the database, which
+      we'd do by conforming to a Restful routes pattern. Again, we'd covered this in the course previously.
+      The upshot of all of this is that we'd quickly move from pure Java code to full-stack - in other words,
+      a complete web app which can connect to a database.
+      </p>
+      <p>
+      Following the intro to Spring, we moved on to "annotating" our Java code. We annotate it so that
+      Spring can pick up the annotations and automate some tasks, which saves us typing out explicit
+      instructions. Spring does a lot of the heavy and tedious work for us! For example, whenever we wanted
+      to create a database table, we'd annotate with "@table" followed by the name of the database table we
+      wished to create. Spring would then read the next few lines and create that table with all of the
+      properties it found; each property forming a column in the table. It got a lot more complex than
+      that, but it did save us typing out the specific database code we'd have to use otherwise.
+      </p>
+      <q>A bleak winter leads to a joyful Spring</q>
+      <p>
+      There was a lot to take in, and to be honest I was struggling with it a bit. The part I struggled with the
+      most was being told to "accept that it does it, don't worry about how it does it". Like others in the
+      class, I didn't find this easy. I like to know why and how something is happening. For example, I've
+      never really enjoyed magic tricks. If the magician doesn't explain how the trick is done - and they
+      rarely do - it just annoys me. It was a similar sort of thing here!
+      </p>
+      <p>
+      The homework was a research task. We were asked to research the concept of relational databases, and
+      the types of relations. We'd covered this briefly earlier in the course. There are <em>one to one</em> (rarely
+      used), <em>one to many</em> and <em>many to many</em> relationships. As examples, a one to one relationship might be a
+      husband and wife. The husband has one wife, and the wife has one husband - all being legal of course!
+      One to many might be branches on a tree. The tree has many branches, but each branch belongs to just
+      one tree. And for many to many, that might be students and classes. Each student has many classes to
+      attend, and each class has many students enrolled.
+      </p>
+      <p>
+      We built upon this on <strong>Tuesday</strong>, as we learned how to create database links using
+      Spring. I still wasn't fully on board with it. I got the gist of what we were doing, and was able to
+      follow along, but at this point it felt like I would only be able to reproduce what we were doing by
+      looking at a working example and copying the code line by line. It wasn't an enjoyable experience. I
+      had a chance meeting with one of the instructors in the kitchen, and he assured me that I would get
+      used to this feeling. When starting a new job, or even a new project, you might be presented with an
+      existing code base which might be built using various frameworks and toolkits. You need to research
+      and learn them, to understand what is going on before working on them.
+      </p>
+      <p>
+      I persisted with it, and I should say that I found the power of Spring very impressive. It allowed
+      you to manipulate tables in a database with very little code. You just point it to the tables in the
+      database, and it pretty much does the rest for you. You just need to tell it how the tables relate to
+      each other, which is why you need a good understanding of database relations (ie. one to many, many
+      to many).
+      </p>
+      <p>
+      The homework for the night involved creating a User/Folder/Files model. Each user would have multiple
+      folders, with each folder containing multiple files. So, the user to folders and folder to files
+      relationships are both classed as "one to many".
+      </p>
+      <p>
+      I still wasn't entirely comfortable going into <strong>Wednesday</strong>, and I mentioned it during
+      the morning stand-up. The stand-up is meant as an opportunity to open up about any issues or
+      "blockers" you're having, as well as what is going well. I'm not convinced everyone is always
+      completely honest though, but to be fair, not everyone is comfortable speaking out in groups. I don't
+      mind though, so if I have issues I let it be known!
+      </p>
+      <p>
+      We continued with our Spring lessons (there have been many jokes about the first/second/third day of
+      Spring etc), and we learned about JPA (Java Persistence API). This is a specification really, which
+      states how Spring and Hibernate should connect the Java code with the PostgreSQL database. We don't
+      really go into too much depth on this - we just implement it and customise it a little. These things
+      are very difficult to describe without going into a lot of detail, and I appreciate my blog posts are
+      long enough as it is!
+      </p>
+      <p>
+      Our final homework for the week was to create a whisky and distillery tracker. One of my classmates
+      is a bit of an expert, so this was right up his street. In fact, his very first web app on the course
+      was a whisky itinerary tool named "Ctrl Malt Delete" - genius!
+      </p>
+      <p>
+      Anyway, the homework task was to create a whisky and distillery web app. It would <em>technically</em>
+      be full stack, but...  not really. A database and API were already set up for us in the homework start
+      code. If you entered your computer's address into the web browser ("localhost") followed by "/whiskies",
+      it would display a list of all whiskies. If you entered "/distilleries", it would display all
+      distilleries. Our task was to create custom routes. For example, you could enter "/whiskies/age/12"
+      to display all 12 year old whiskies. I didn't find it too difficult, which was a good sign that I was
+      overcoming the difficulties I experienced at the start of the week.
+      </p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+      <strong>Thursday</strong> was a nice day. We had an all-day paired lab, and as both myself and my
+      partner had got to grips with the week's content, we finished it really quickly. By lunchtime, in
+      fact. To be honest, I wouldn't have finished it that quickly if it were just me, but I felt entirely
+      comfortable with the process at this point.
+      </p>
+      <p>
+      We were to reconvene at 3:30pm, so I took the opportunity to continue working on my JavaScript game -
+      a version of "Play Your Cards Right" that I'd mentioned previously. I'm quite pleased with how it's
+      turned out, which is very much as I envisioned. There are one or two compromises that I've made, in
+      order to get it to work on the largest range of devices. It's very frustrating when you've perfected
+      a layout on a laptop/desktop, only to find that it completely breaks on a mobile phone or tablet. And
+      then, when you've modified it to support mobile devices, you have to consider what happens if the
+      device is rotated between portrait and landscape.
+    </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/codeclan_kitchen_cobwebs.jpg" width="450px" height="283" alt="CodeClan kitchen decorated with Halloween cobwebs"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+    <p>
+       It's all part of the learning, although I have no
+      idea whether I'll be working on front-end web stuff in future. The working version is up here if
+      you'd like to take a look:
+      </p>
+      <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./PlayYourCardsRight.html" target="_blank"><strong>Play Your
+        Cards Right</strong></a>
+      </p>
+      <p>
+      No homework night on Thursday - so I popped round to the local for a couple of drinks after we'd gone over the
+      lab exercise. Thankfully, we were back at The Chanter (£3 per pint) this week as opposed to Bar 4042
+      (£4.50 per pint) last week. These things matter a lot more when you have no income and you don't know
+      where your next wage is coming from!
+      </p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+      I arrived on <strong>Friday</strong> in good spirits (no pun intended), amidst the spooky cobwebs, to collect our
+      homework for the weekend. I was surprised to discover that it wasn't a review of the week as it
+      usually is. Instead, it was JavaScript based homework. More specifically, we were to refactor some
+      code we'd used earlier in the course to take advantage of some newer JavaScript features. These
+      features were only made available 3 years ago in the JavaScript ES6 release. Next week we'd be
+      learning how to use a JavaScript library called <a href="https://reactjs.org/" target="_blank">REACT</a>,
+      so presumably the weekend's homework was in aid of that.
+      </p>
+      <p>
+      There was a talk on in the afternoon from a local company called
+      <a href="http://bemo.co/" target="_blank">Bemo</a>. In fact, they're based next door in Codebase.
+      They specialise in developing mobile apps, and they have some well known clients such as STV and the
+      BBC.
+    </p>
+    <p>
+      It was a really good talk, and very honest too. They have hired CodeClan students in the past,
+      but aren't likely to be hiring any more in the near future. The reasons for this were explained, and
+      part of it is that they need people to hit the ground running. It is a little disappointing as they
+      sound like a great company to work for, but, at the same time I appreciate their honesty.
+      </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/codeclan_bemo_talk.jpg" width="410px" height="470" alt="Photo of a talk from Bemo representative in CodeClan main area"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p>
+      Well that's it for another week - only 3 to go...
+      </p>
 </div>
 </div>
 </div>
 
+<!--
 <a id="week14">&nbsp;</a>
   <h4 class="blog-post">Week 14 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
 <div id="w14" class="blog-panel">
