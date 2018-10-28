@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', ()=>{
   for (let i = 0; i < 100; i++) {
-    const star = '<div class="star" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*document.body.clientHeight*1.5+'px; left: '+Math.random()*document.body.clientWidth+'px;"></div>';
+    const star = '<div class="star" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*document.body.clientHeight+'px; left: '+Math.random()*document.body.clientWidth+'px;"></div>';
     document.querySelector('body').innerHTML += star;
   }
 
-  let gameDeck = startDeck;
+  let gameDeck = createDeck();
 
   const card1Slot = document.querySelector('#card1');
   const card2Slot = document.querySelector('#card2');
@@ -17,10 +17,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   let currentCard = 0;
   let gameActive = false;
   let currentScore = 0;
-  let currentCardChanges = 3;
+  let currentCardChanges = 5;
 
   const dealButton = document.querySelector('#deal-button');
   const playButton = document.querySelector('#play-button');
+  const playAgainButton = document.querySelector('#play-again-button');
   const aboutButton = document.querySelector('#about-button');
   const instructionsButton = document.querySelector('#instructions-button');
   const higherButton = document.querySelector('#higher-button');
@@ -31,14 +32,33 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const aboutCloseButton = document.querySelector('#about-modal .close-button');
   const instructionsModal = document.querySelector('#instructions-modal');
   const instructionsCloseButton = document.querySelector('#instructions-modal .close-button');
+  const endGameModal = document.querySelector('#end-game-modal');
+  const endGameCloseButton = document.querySelector('#end-game-modal .close-button');
   const gameInfo = document.querySelector('#game-info');
   const gameOutput = document.querySelector('#game-output');
   const questionSection = document.querySelector('#question-output');
+  const endGameModalMessage = document.querySelector('#game-end p');
 
   const gameScore = document.querySelector('#score-span');
   const cardChanges = document.querySelector('#changes-span');
 
+  const audioClick = new Audio('./play_your_cards_right/audio/Click.mp3');
+  const audioShuffleCards = new Audio('./play_your_cards_right/audio/CardsShuffle.mp3');
+  const audioCardSwap = new Audio('./play_your_cards_right/audio/CardSwap.mp3');
+  const audioCardsReRack = new Audio('./play_your_cards_right/audio/CardsReRack.mp3');
+  const audioErrorOrLose = new Audio('./play_your_cards_right/audio/ErrorOrLose.mp3');
+  const audioWinGame = new Audio('./play_your_cards_right/audio/WinGame.mp3');
+
   playButton.addEventListener('click', ()=>{
+    audioClick.play();
+    resetGame();
+    dealCards();
+    setUpCards();
+  });
+
+  playAgainButton.addEventListener('click', ()=>{
+    audioClick.play();
+    toggleEndGameScreen();
     resetGame();
     dealCards();
     setUpCards();
@@ -48,10 +68,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   aboutCloseButton.addEventListener('click', toggleAbout);
   instructionsButton.addEventListener('click', toggleInstructions);
   instructionsCloseButton.addEventListener('click', toggleInstructions);
+  endGameCloseButton.addEventListener('click', toggleEndGameScreen);
 
 
   higherButton.addEventListener('click', (e)=>{
-    console.log(gameDeck.length);
     lowerButton.classList.remove('higher-lower-pressed');
     e.target.classList.add('higher-lower-pressed');
   });
@@ -64,10 +84,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
   window.addEventListener('click', modalOnClick);
 
   function toggleAbout() {
-       aboutModal.classList.toggle("show-rules-about");
+       aboutModal.classList.toggle("show-modal");
    }
    function toggleInstructions() {
-        instructionsModal.classList.toggle("show-rules-about");
+        instructionsModal.classList.toggle("show-modal");
+    }
+
+   function toggleEndGameScreen() {
+        endGameModal.classList.toggle("show-modal");
     }
 
     function modalOnClick(e) {
@@ -75,6 +99,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             toggleInstructions();
         } else if (e.target === aboutModal) {
           toggleAbout();
+        } else if (e.target === endGameModal) {
+          toggleEndGameScreen();
         }
     }
 
@@ -107,6 +133,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
 
   function dealCards() {
+    audioShuffleCards.play();
     dealtCards.length = 0;
     let i = 0;
     function setCard() {
@@ -120,6 +147,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       }
     }
     setCard();
+    console.log(dealtCards);
   }
 
   function setUpCards() {
@@ -128,6 +156,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         cardSlot.classList.add('next-card');
       }
       cardSlot.onclick = function(e) {
+        console.log(currentCard);
         clearAreas();
         const innerCard = e.target.firstElementChild;
         if (!e.target.previousElementSibling.firstElementChild.classList.contains('hidden')
@@ -140,6 +169,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             updateScore();
           } else if (e.target.nextElementSibling === null && evaluateCards() && gameDeck.length>=5) {
             let delay = 0;
+            audioCardsReRack.play();
             function delayReRack() {
               delay++;
               if (delay<5){
@@ -173,6 +203,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       }
     }
     cardSlots[0].onclick = function(e) {
+      console.log(currentCard);
       clearAreas();
       const innerCard = e.target.firstElementChild;
       e.target.style.background = "white";
@@ -190,10 +221,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
   changeCardButton.onclick = function() {
     if (gameActive && !cardSlots[currentCard].firstElementChild.classList.contains('hidden')) {
         if (currentCardChanges>0) {
+          audioClick.play();
           questionSection.innerHTML = "";
           updateCardChanges();
           addQuestionToPage(loadQuestion());
         } else {
+          audioErrorOrLose.play();
           gameInfoFlash();
           gameInfo.textContent = "You have no more card changes to play!";
           questionSection.innerHTML = "";
@@ -235,6 +268,7 @@ function addQuestionToPage(loadedQuestion) {
       if (e.target.textContent === loadedQuestion[0].answers[loadedQuestion[0].answer]) {
         gameInfoFlash();
         gameInfo.textContent = "Correct! Your card has been swapped.";
+        audioCardSwap.play();
         changeCard();
       } else {
         gameInfoFlash();
@@ -297,11 +331,18 @@ function addQuestionToPage(loadedQuestion) {
       cardSlot.onclick = null;
     }
     if (gameWon) {
+      audioWinGame.play();
+      gameInfo.style.backgroundColor = "lightcoral";
       gameInfo.textContent = "\u2666 \u2663 All cards have been played - YOU WIN! \u2665 \u2660";
+      endGameModalMessage.textContent = "All cards have been played - YOU WIN! Your score was: " + currentScore;
+      toggleEndGameScreen();
     } else {
+      audioErrorOrLose.play();
       gameInfo.textContent = "\u2666 \u2663 GAME OVER \u2665 \u2660";
+      endGameModalMessage.textContent = "Your score was: " + currentScore;
       gameChangesScoreFlash(gameInfo);
       gameInfo.style.backgroundColor = "lightcoral";
+      toggleEndGameScreen();
     }
   }
 
@@ -330,16 +371,16 @@ function addQuestionToPage(loadedQuestion) {
   function resetGame() {
     gameInfoFlash();
     gameActive = true;
-    gameDeck = startDeck;
+    gameDeck = createDeck();
     dealtCards.length = 0;
     gameInfo.textContent = "Click on the first card to reveal it...";
     questionSection.innerHTML = "";
     gameScore.textContent = "0";
-    cardChanges.textContent = "3";
+    cardChanges.textContent = "5";
 
     currentCard = 0;
     currentScore = 0;
-    currentCardChanges = 3;
+    currentCardChanges = 5;
     rackCards();
   }
 
