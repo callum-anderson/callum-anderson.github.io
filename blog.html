@@ -36,6 +36,7 @@
   <a href="./blog.html#week11">Week 11</a>
   <a href="./blog.html#week12">Week 12</a>
   <a href="./blog.html#week13">Week 13</a>
+  <a href="./blog.html#week14">Week 14</a>
 </div>
 </div>
         <div class="col-xs-3">
@@ -1972,18 +1973,242 @@ wrap for <strong>week 3</strong>!
 </div>
 </div>
 
-<!--
+
 <a id="week14">&nbsp;</a>
-  <h4 class="blog-post">Week 14 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
+  <h4 class="blog-post">Week 14 <em>- posted 04/11/18</em><span class="collapser">-</span></h4>
 <div id="w14" class="blog-panel">
 <div class="row">
       <div class="col-xs-12">
-  <p>
-  </p>
+      <p>
+      Week 14 started exactly as it ended - contemplating the end of the course and making the leap into
+      employment! A few of my classmates have been applying for jobs already, and some have had interviews
+      too. As I mentioned previously, I decided against jumping into job applications too early. I want to
+      put one final effort into the last part of the course - and the final project.
+      </p>
+      <p>
+      We'd be learning the REACT framework this week, which is a JavaScript-based front-end framework which
+      allows you to quickly build up webpages out of components. In "traditional" web design, the structure
+      of the page is created (HTML), then one or more separate stylesheets are created to change the look
+      of the page (CSS). Finally, further separate JavaScript files can be created to add
+      functionality/interactivity to the page. REACT brings the HTML and JavaScript together into each
+      component, and also automates a lot of tasks that you'd otherwise have to type out yourself.
+      </p>
+      <p>
+      So that's how <strong>Monday</strong> kicked off. We discussed the principles behind REACT, one of
+      which is that it's one-way data flow. You have a top-level component, and nested components within
+      that. Any data which is to be displayed on the page flows down from the component above it. It's not
+      <em>technically</em> true, as far as I'm concerned, because we all know that when you click on
+      something on a page it can make something happen elsewhere on the page. That can't happen without
+      two-way data flow. Perhaps I'm being pedantic, but I think that you need to question things to
+      completely understand them and how they relate to the bigger picture.
+      </p>
+      <p>
+      We also learned about how REACT creates a "virtual DOM". The DOM is the Document Object Model, and it
+      basically lists every element on the webpage. Making changes to the DOM - such as adding or removing
+      an image from the page - can be quite intensive in terms of computing power used. So, REACT creates a
+      virtual copy of the DOM, and only interacts with the "real" DOM when necessary. We were told that
+      this is more efficient; but again I questioned that. I didn't have to look very far to confirm my
+      suspicions, that REACT is in fact
+      <a href="https://hackernoon.com/how-i-converted-my-react-app-to-vanillajs-and-whether-or-not-it-was-a-terrible-idea-4b14b1b2faff" target="_blank">slower than "vanilla" JavaScript</a>
+      - but only really on complex webpages. In the vast majority of cases it's about the same speed.
+      However, performance isn't really why you'd use it. You'd use it to create webpages faster and more
+      efficiently. That's pretty much the case with any framework or library.
+      </p>
+      <p>
+      We had a relatively small homework assignment, which was to build a basic REACT-based webpage which
+      displayed film releases. There wasn't an awful lot to it, but it still took me twice as long as it would
+      have done if I weren't using REACT. I'm guessing that these tables will turn once I get over the
+      learning curve.
+      </p>
+      <p>
+      The next couple of days were largely about practicing with REACT, and building up the complexity of the
+      webpages we were creating. We returned to API connections again on <strong>Tuesday</strong>, which in
+      this context are connections you make to a server to receive "raw" data back. You'd then output it on
+      your webpage.
+      </p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+      We had a mini-lab to refresh our memories on this. I was surprised at how much I'd forgotten. Well, I
+      say "forgotten" but upon referring to my notes it soon came rushing back to me. That's an important
+      point actually - you don't need to remember exactly how to do <em>everything</em>, and you'll always have to
+      refer back to notes. The main thing is to remember that you can do something and why you'd do it.
+      We're not robots, after all.
+      </p>
+      <p>
+      Our homework involved building a small webpage which connects to the iTunes API, to display the top
+      20 songs in the iTunes charts. Of course, we had to build it using REACT. The added extension was to
+      show the top 20 books, TV shows or films; but unfortunately the API didn't support the connection. It
+      took me a while to figure this out, which was a little frustrating. On the one hand I feel that
+      CodeClan could maybe review the homework content to make sure it's actually feasible, but then on the
+      other, I appreciate that these are the types of problem we might encounter in the "real world".
+      </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/codeclan_halloween_entrance.jpg" width="380px" height="434px" alt="CodeClan entrance decorated for Halloween"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p>
+      It was another all-day paired lab on <strong>Wednesday</strong>, which followed on from the idea
+      behind the homework. The task involved creating a web app which connected to an
+      API and displayed some information. We've had this task a number of times now, but it was really all
+      about practicing with REACT. There were quite a few staff members and students roaming around in
+      Halloween costumes as there was a party in CodeClan that night, so we were a little distracted from
+      the task at hand! I didn't have time to sort out a costume, but planned to go to the party for a bit
+      anyway.
+      </p>
+      <p>
+      Back to the lab task - we chose to use the <a href="https://api.nasa.gov/" target="_blank">NASA API</a>,
+      with the idea being that you could select a country or coordinate (by using latitude and longitude) to
+      display a satellite image of that area. We got a bit excited about this, having previewed the images
+      returned by the API. We managed to get some clear images of Edinburgh, and we thought that it allowed
+      you to specify the zoom level too. It turned out that we were mistaken about that, and also that we'd
+      just been very lucky getting the clear images. Most other images returned were just clouds! By that
+      point, we were too far along to consider switching to a different API. It was still quite a good
+      result though. Sometimes I think I'm a little too harsh on myself - I look at what I haven't achieved
+      rather than what I have.
+      </p>
+      <p>
+      It was essentially our last homework of the course that night, and it's fair to say it was one of the
+      hardest assignments we'd had to date. It involved dissecting the code of a REACT app which used a
+      "router". This was to be the last piece of the puzzle to connect the back-end/database with the
+      front-end, and I was surprised that we'd only be spending a day on such an important topic. To be
+      fair, we were the first cohort to go through this part of the course in the new format (Java
+      following JavaScript, rather than Java first), so we can't expect it all to be planned out meticulously.
+      </p>
+      <p>
+      I planned to do the homework on site in CodeClan as I was hanging about for the Halloween party later.
+      However, after spending an hour on it I thought I'd better head off to give it more attention. Shame really,
+      as there was free beer! Study comes first though. So, the "router" part of REACT is a little difficult
+      to explain, but it involves channeling requests on the webpage to the database. If the website was
+      about budgies, and you clicked on a link to show all budgies, the router would make the call to the
+      database to pull out all budgies and display them on
+      the page. If you clicked on one budgie, it would pull that specific budgie from the database. If you
+      filled out a form to add a budgie to the page, and maybe upload an image, the router would handle
+      adding the data to the database. As always, it's not as simple as that, but that's the basic premise.
+      </p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+      The silver lining of missing the party was that I arrived fresh and full of vigor on
+      <strong>Thursday</strong>. We spent the morning going over the homework and discussing REACT router
+      and how to implement it. It actually wasn't as complex as I thought, but then I might not have felt
+      that way if I hadn't spent the extra time on the homework. I should add that this was the last coding
+      lesson of the course! I say "coding lesson" as we were due another PDA lesson the following day.
+      </p>
+      <p>
+      The final project assignment was handed out just before lunch. There wasn't quite the same level of
+      excitement as the previous projects, for a number of reasons. I mentioned previously that some of us
+      were actively looking for jobs, so perhaps their focus wasn't entirely on the final project. Understandable.
+      We still had our PDA content to finish too - I'll get to that in a minute. We also had our speed
+      networking event to prepare for, which was scheduled for the following Friday.
+      </p>
+      <p>
+      And finally, I think there was a
+      feeling that perhaps we hadn't really learned as much in this module as we did in the JavaScript
+      module. This module was very framework-heavy, which is good because frameworks are essential tools to
+      maximise productivity. However, they generally only allow you to work faster. There's nothing that you can
+      do with a framework that you can't do with "vanilla" code.
+      </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/final_project_planning.jpg" width="400px" height="416px" alt="Team planning for the final project"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p>
+      The suggested project assignments included:
+      </p>
+      <ul>
+      <li>A <strong>"Jurassic Park" management app</strong>. The idea is to manage attractions, as well as
+        which dinosaurs can go into which paddocks.</li>
+      <li>A <strong>news feed app</strong>, which fetches and sorts live news feeds via an API.</li>
+      <li>A <strong>restaurant booking system</strong>, to manage customers and tables, as well as tracking
+        spending.</li>
+      </ul>
+      <p>
+      We could use our own idea too, so long as we had it approved by an instructor. It was also up to us
+      whether we decided to work alone or team up, but I was particularly keen on working with someone. I've
+      found that it increases the quality of output. Some teams seemed to form spontaneously - I suspect
+      that these were pre-planned alliances! Others were biding their time before committing to a team, or
+      even which app to create.
+      </p>
+      <p>
+      I provisionally agreed to work with two other classmates on a "pet" app. The idea was that you could
+      log in as a pet owner, or a service provider such as a vets or grooming service. I thought it sounded
+      interesting enough, and it had potential to expand into other areas.
+      </p>
+      <p>
+      I committed to both the team and pet app idea on <strong>Friday</strong>, but we wouldn't have time to start
+      planning until the afternoon. This was because we had a talk scheduled first, to go over the speed
+      networking event the following Friday. There are to be representatives from 9 companies, all of which
+      are actively recruiting and considering CodeClan students. We would get 6 minutes with each company,
+      and a chance to "mingle" with the reps afterwards at lunchtime. More on that next week, I guess!
+      </p>
+      <p>
+      Following that, we had another lesson about our PDA. I mentioned this previously, it's the
+      <a href="https://www.sqa.org.uk/sqa/16759.html" target="_blank">SQA Professional Development Award</a>
+      that's pretty much included with the course (although it is optional). We have to gather "evidence"
+      from our coursework to submit, which tends to be screenshots or photos of diagrams etc. I'm slightly
+      behind with this, so will need to make time for it. Somehow!
+      </p>
+      <p>
+      There was another talk at lunchtime from Dwayne Pascal of
+      <a href="https://www.skyscanner.net/" target="_blank">Skyscanner</a>. You may be familiar with the
+      name. They have been one of Edinburgh's biggest tech success stories in recent years. They were
+      founded by just 3 people in 2004, and have grown exponentially since. They were acquired a couple of years
+      ago by a Chinese firm for the best part of £2bn. I did notice that CodeClan seemed to be pushing this
+      talk a lot more than the others I've been to, the proverbial red carpet was rolled out! They're not actively
+      recruiting CodeClan students until at least September next year either.
+      </p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+      <p>
+      I finally got to sit down in the afternoon with my new teammates, to sort out a plan for our project.
+      We got our brief signed off by an instructor fairly early, which is essentially as I mentioned earlier.
+      A pet owner could look at services for their pet, and a business owner could confirm and accept
+      bookings. Hopefully we'd get it to do a lot more than that, but we had to produce an MVP (Minimum
+      Viable Product) for sign-off.
+    </p>
+    <p>
+      We agreed to meet on Sunday as well, mainly because we had such a late
+      start on the project. We had permission to use space in CodeBase next door, as CodeClan is usually closed
+      on Sundays.
+      <p>
+      A busy week lay ahead!
+      </p>
+    </div>
+      <div class="col-sm-5">
+      <img class="img-responsive blog-img" src="./thumbs/codebase_entrance.jpg" width="410px" height="330px" alt="CodeBase reception desk"/>
+      <div id="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content img-responsive"/>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
 </div>
 </div>
 </div>
-
+<!--
 <a id="week15">&nbsp;</a>
   <h4 class="blog-post">Week 15 <em>- posted XX/XX/18</em><span class="collapser">-</span></h4>
 <div id="w15" class="blog-panel">
