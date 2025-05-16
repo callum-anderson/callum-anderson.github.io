@@ -12,4 +12,6 @@ if (path.includes('index.html')) {
     document.getElementById('link-costs').classList.add('active');
 } else if (path.includes('benefits.html')) {
     document.getElementById('link-benefits').classList.add('active');
+} else if (path.includes('faq.html')) {
+    document.getElementById('link-faq').classList.add('active');
 }
